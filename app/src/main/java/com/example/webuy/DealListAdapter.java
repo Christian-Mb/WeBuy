@@ -1,0 +1,68 @@
+package com.example.webuy;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyViewHolder> {
+
+    Context context;
+    String[] dTitle;
+    String[] dDescription;
+    int[] dCodePostal;
+
+    public DealListAdapter(Context c, String[] dTitle, String[] dDescription, int[] dCodePostal){
+        this.context = c;
+        this.dTitle = dTitle;
+        this.dDescription = dDescription;
+        this.dCodePostal = dCodePostal;
+    }
+
+    @NonNull
+    @Override
+    public DealListAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.deal_row, parent, false);
+        MyViewHolder viewHolder = new MyViewHolder(view);
+
+        viewHolder.item_deal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "test",Toast.LENGTH_SHORT).show();
+            }
+        });
+        return new DealListAdapter.MyViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull DealListAdapter.MyViewHolder holder, int position) {
+        holder.title.setText(dTitle[position] + " " + dCodePostal[position]);
+        holder.descrption.setText("Promo : "+ dDescription[position]);
+    }
+
+    @Override
+    public int getItemCount() {
+        return dTitle.length;
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+
+        TextView title, descrption;
+        RelativeLayout item_deal;
+
+        public MyViewHolder(@NonNull View itemView) {
+            super(itemView);
+            item_deal = itemView.findViewById(R.id.rl_main_content_deal);
+            title = itemView.findViewById(R.id.deal_title);
+            descrption = itemView.findViewById(R.id.deal_description);
+        }
+    }
+
+}
