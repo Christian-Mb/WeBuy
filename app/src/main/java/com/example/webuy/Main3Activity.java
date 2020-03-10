@@ -35,22 +35,24 @@ public class Main3Activity extends AppCompatActivity
             switch (item.getItemId()) {
                 case R.id.navigationMyProfile:
                     fragment = new LoginFragment();
-
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case R.id.navigationMyCourses:
                     fragment = new RegisterFragment();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case R.id.navigationHome:
                     fragment = new MagazinFragment();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case  R.id.navigationSearch:
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case  R.id.navigationMenu:
                     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                     drawer.openDrawer(GravityCompat.START);
                     break;
             }
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
             return true;
         }
     };
