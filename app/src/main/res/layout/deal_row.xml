@@ -8,7 +8,6 @@
 
     <RelativeLayout
         android:id="@+id/rl_main_content_deal"
-        android:gravity="center_vertical"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_width="wrap_content"
@@ -16,23 +15,99 @@
         android:layout_height="170dp"
         android:translationZ="6dp">
 
+        <ImageView
+            android:id="@+id/deal_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/logo_auchan"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
 
+        </ImageView>
         <TextView
             android:id="@+id/deal_title"
-            android:text="Auchan"
-            android:layout_width="fill_parent"
-            android:gravity="center"
+            android:text="Deal Title"
+            android:layout_width="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/deal_image"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/deal_promo_before"
+            android:text="Prix hors promo : 10 €"
+            android:layout_below="@id/deal_title"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/deal_image"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         </TextView>
 
         <TextView
-            android:id="@+id/deal_description"
-            android:text="Promo : 12"
-            android:gravity="center"
-            android:layout_marginTop="40dp"
-            android:layout_width="fill_parent"
+            android:id="@+id/deal_promo_after"
+            android:text="Prix après promo : 5€ €"
+            android:layout_below="@id/deal_promo_before"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/deal_image"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/Deal_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Utilisateur"
+            android:layout_below="@id/deal_image"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp">
+        </TextView>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toLeftOf="@id/Deal_user"
+            android:src="@drawable/logo_auchan"
+            android:layout_below="@id/deal_image"
+            android:layout_marginTop="10dp">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/deal_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="35 min"
+            android:gravity="right"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/deal_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deal description..."
+            android:layout_toRightOf="@id/Deal_user"
+            android:layout_below="@id/deal_promo_after"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/deal_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Voir plus"
+            android:gravity="right"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentBottom="true">
         </TextView>
 
     </RelativeLayout>
