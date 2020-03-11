@@ -65,7 +65,7 @@
             android:text="Utilisateur"
             android:layout_below="@id/deal_image"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp">
+            android:layout_marginLeft="10dp">
         </TextView>
 
         <ImageView
@@ -100,7 +100,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/deal_time"
+            android:id="@+id/deal_link"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Voir plus"
