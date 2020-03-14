@@ -1,6 +1,5 @@
 package com.example.webuy;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.MenuItem;
@@ -33,20 +32,20 @@ public class Main3Activity extends AppCompatActivity
         public boolean onNavigationItemSelected(@Nullable MenuItem item) {
             Fragment fragment = null;
             switch (item.getItemId()) {
-                case R.id.navigationMyProfile:
-                    fragment = new LoginFragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+                case R.id.dashboard:
+                   // fragment = new LoginFragment();
+                   // getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case R.id.navigationMyCourses:
-                    fragment = new RegisterFragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+                  //  fragment = new RegisterFragment();
+                   // getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case R.id.navigationHome:
                     fragment = new MagazinFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case  R.id.navigationSearch:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+                    //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case  R.id.navigationMenu:
                     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
