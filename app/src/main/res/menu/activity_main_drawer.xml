@@ -5,27 +5,26 @@
     tools:showIn="navigation_view">
 
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_dark_mode"
 
-            android:title="Dark Mode"
-            app:actionViewClass="android.widget.Switch"
-            app:showAsAction="always"/>
+    <item
+        android:id="@+id/dark_mode"
+        android:icon="@drawable/ic_dark_mode"
+        android:title="Dark Mode"
+        app:actionViewClass="android.widget.Switch"
+        app:showAsAction="always"/>
 
-    </group>
+
 
     <item android:title="Profile">
         <menu>
             <item
 
-                android:id="@+id/nav_gallery"
+                android:id="@+id/edit_profile"
                 android:icon="@drawable/ic_edit_profile"
                 android:title="Edit Profile" />
             />
             <item
-                android:id="@+id/nav_slideshow"
+                android:id="@+id/change_password"
                 android:icon="@drawable/ic_edit_password"
 
                 android:title="Change Password" />
@@ -37,7 +36,7 @@
     <item android:title="Notifications">
         <menu>
             <item
-                android:id="@+id/nav_manage"
+                android:id="@+id/notification"
                 android:icon="@drawable/ic_notifications"
 
                 android:title="Notifications"
@@ -51,11 +50,11 @@
     <item android:title="Regional">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/langage"
                 android:icon="@drawable/ic_languages"
                 android:title="Langage" />
             <item
-                android:id="@+id/nav_dark_mode"
+                android:id="@+id/logout"
                 android:icon="@drawable/ic_logout"
                 android:title="Logout" />
         </menu>

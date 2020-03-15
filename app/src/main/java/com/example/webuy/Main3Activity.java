@@ -1,5 +1,6 @@
 package com.example.webuy;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.MenuItem;
@@ -104,23 +105,29 @@ public class Main3Activity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_dark_mode) {
+        if (id == R.id.dark_mode) {
             //code for setting dark mode
             //true for dark mode, false for day mode, currently toggling on each click
             DarkModePrefManager darkModePrefManager = new DarkModePrefManager(this);
             darkModePrefManager.setDarkMode(!darkModePrefManager.isNightMode());
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             recreate();
+        } else if (id == R.id.edit_profile) {
+            Intent intent = new Intent(getApplicationContext(),Main4Activity.class);
+            startActivity(intent);
+
+
+        } else if (id == R.id.change_password) {
+            Intent intent = new Intent(getApplicationContext(),Main5Activity.class);
+            startActivity(intent);
+
+
+        } else if (id == R.id.notification) {
+
+        } else if (id == R.id.langage) {
+
+        } else if (id == R.id.logout) {
+
 
         }
 
