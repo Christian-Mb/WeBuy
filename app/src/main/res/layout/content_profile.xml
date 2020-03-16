@@ -24,7 +24,7 @@
             <RelativeLayout style="@style/profileDetailsLayout">
                 <ImageView
                     android:id="@+id/nameImageView"
-                    android:src="@drawable/ic_name"
+                    android:src="@drawable/ic_edit_profile"
                     style="@style/profileDetailsImage" />
 
                 <TextView
@@ -45,7 +45,7 @@
             <RelativeLayout style="@style/profileDetailsLayout">
                 <ImageView
                     android:id="@+id/mobileImageView"
-                    android:src="@drawable/ic_mobile"
+                    android:src="@drawable/ic_contact"
                     style="@style/profileDetailsImage" />
 
                 <TextView
@@ -65,7 +65,7 @@
             <RelativeLayout style="@style/profileDetailsLayout">
                 <ImageView
                     android:id="@+id/emailImageView"
-                    android:src="@drawable/ic_email"
+                    android:src="@drawable/ic_mail"
                     style="@style/profileDetailsImage" />
 
                 <TextView
@@ -105,7 +105,7 @@
             <RelativeLayout style="@style/profileDetailsLayout">
                 <ImageView
                     android:id="@+id/dobImageView"
-                    android:src="@drawable/ic_dob"
+                    android:src="@drawable/ic_calendar"
                     style="@style/profileDetailsImage" />
 
                 <TextView

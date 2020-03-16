@@ -38,8 +38,8 @@ public class Main3Activity extends AppCompatActivity
                    // getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case R.id.navigationMyCourses:
-                  //  fragment = new RegisterFragment();
-                   // getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+                    fragment = new SuggestionFragment();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case R.id.navigationHome:
                     fragment = new MagazinFragment();
