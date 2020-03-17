@@ -32,6 +32,8 @@
             android:layout_gravity="end|right|bottom"
             android:layout_marginBottom="60dp"
             android:layout_marginRight="5dp"
+            android:clickable="true"
+
 
             android:contentDescription="@string/submit"
             android:src="@drawable/ic_add" />
