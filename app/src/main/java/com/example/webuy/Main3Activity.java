@@ -37,8 +37,8 @@ public class Main3Activity extends AppCompatActivity
             Fragment fragment = null;
             switch (item.getItemId()) {
                 case R.id.dashboard:
-                   // fragment = new LoginFragment();
-                   // getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+                    Intent intent = new Intent(getApplicationContext(),DashbordActivity.class);
+                    startActivity(intent);
                     break;
                 case R.id.navigationMyCourses:
                     fragment = new SuggestionFragment();
