@@ -41,7 +41,7 @@ public class Main3Activity extends AppCompatActivity
                     startActivity(intent);
                     break;
                 case R.id.navigationMyCourses:
-                    fragment = new MagazinFragment();
+                    fragment = new DealFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case R.id.navigationHome:
