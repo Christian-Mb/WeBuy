@@ -1,6 +1,8 @@
 package com.example.webuy;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +37,7 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
         viewHolder.item_deal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "test",Toast.LENGTH_SHORT).show();
+                context.startActivity(new Intent(context,DealActivity.class));
             }
         });
         return new DealListAdapter.MyViewHolder(view);
@@ -44,7 +46,6 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull DealListAdapter.MyViewHolder holder, int position) {
         holder.title.setText(dTitle[position] + " " + dCodePostal[position]);
-        holder.descrption.setText("Promo : "+ dDescription[position]);
     }
 
     @Override
@@ -54,14 +55,15 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView title, descrption;
+        TextView title, descrption, promo_before;
         RelativeLayout item_deal;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             item_deal = itemView.findViewById(R.id.rl_main_content_deal);
             title = itemView.findViewById(R.id.deal_title);
-            descrption = itemView.findViewById(R.id.deal_description);
+            promo_before = itemView.findViewById(R.id.deal_promo_before);
+            promo_before.setPaintFlags(promo_before.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         }
     }
 

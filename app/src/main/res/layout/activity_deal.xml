@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E6E6"
+    tools:context=".ActivityDeal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative_layout">
+    <ImageView
+        android:id="@+id/deal_image_detail"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo_auchan">
+    </ImageView>
+
+    <View
+        android:layout_below="@id/deal_image_detail"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/holo_blue_dark">
+
+    </View>
+    <TextView
+        android:id="@+id/deal_title_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TITRE DEAL"
+        android:layout_toRightOf="@+id/deal_image_detail"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="20dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/deal_promo_after"
+        android:text="5€"
+        android:textSize="20dp"
+        android:textColor="#ff1100"
+        android:layout_below="@id/creator_image"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/deal_image_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/deal_promo_before"
+        android:text="10€"
+        android:textSize="18dp"
+        android:layout_below="@id/deal_creator"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/deal_promo_after"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:textStyle="bold">
+    </TextView>
+    <ImageView
+        android:id="@+id/creator_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/deal_title_detail"
+        android:layout_toRightOf="@id/deal_image_detail"
+        android:src="@drawable/logo_auchan">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/deal_creator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/deal_title_detail"
+        android:layout_toRightOf="@id/creator_image"
+        android:text="Delal">
+    </TextView>
+
+    <TextView
+        android:id="@+id/deal_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description :
+Consolidez votre alimentation électrique - 12 prises AC et 6 ports USB répondent à tous vos besoins d'alimentation
+Technologie de charge adaptative AiPower - Réglée pour fournir le taux de recharge maximum le plus sûr pour tous vos périphériques alimentés par USB, jusqu'à 2,4 A par port (6A maximum au total)
+La conception cylindrique offre plus d'espace et des angles pratiques pour brancher facilement tous vos appareils électroniques et électriques
+Des protections intégrées protègent vos appareils contre les courants excessifs, la surchauffe et la surcharge. Protection contre la foudre, protection contre les surtensions avec une cote énergétique de 3500 W
+Contenu de l'emballage : Multiprise AUKEY PA-S14, câble d'alimentation 2 mètres, manuel d'utilisation, carte de garantie de remplacement du produit de 24 mois "
+        android:layout_below="@id/deal_image_detail"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+    </TextView>
+
+    <View
+        android:id="@+id/description_underline"
+        android:layout_below="@id/deal_description"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/holo_blue_dark">
+
+    </View>
+
+    <TextView
+        android:id="@+id/participant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description_underline"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="Participant : "
+        >
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/participant_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/participant"
+        android:src="@drawable/logo_auchan">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/participant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/participant"
+        android:textSize="30dp"
+        android:layout_toRightOf="@id/participant_image"
+        android:text="Delal">
+    </TextView>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/participant_image"
+        android:src="@drawable/logo_auchan">
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/participant_name"
+        android:textSize="30dp"
+        android:layout_toRightOf="@id/participant_image"
+        android:text="Delal">
+    </TextView>
+
+    <Button
+        android:id="@+id/BtnParticipate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/participant"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:text="Participer"
+        android:background="@drawable/login_button_bk">
+
+    </Button>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/baseline_chat_black_18dp">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </RelativeLayout>
+</ScrollView>

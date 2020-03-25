@@ -12,7 +12,7 @@
         android:layout_marginRight="10dp"
         android:layout_width="wrap_content"
         android:background="@drawable/shape"
-        android:layout_height="170dp"
+        android:layout_height="130dp"
         android:translationZ="6dp">
 
         <ImageView
@@ -33,12 +33,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/deal_image"
+            android:textSize="25dp"
+            android:textStyle="bold"
             >
         </TextView>
 
         <TextView
-            android:id="@+id/deal_promo_before"
-            android:text="Prix hors promo : 10 €"
+            android:id="@+id/deal_promo_after"
+            android:text="5€"
+            android:textSize="20dp"
+            android:textColor="#ff1100"
             android:layout_below="@id/deal_title"
             android:layout_marginTop="7dp"
             android:layout_marginLeft="10dp"
@@ -48,35 +52,42 @@
         </TextView>
 
         <TextView
-            android:id="@+id/deal_promo_after"
-            android:text="Prix après promo : 5€ €"
-            android:layout_below="@id/deal_promo_before"
-            android:layout_marginTop="7dp"
+            android:id="@+id/deal_promo_before"
+            android:text="10€"
+            android:textSize="18dp"
+            android:layout_below="@id/deal_title"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/deal_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </TextView>
-
-        <TextView
-            android:id="@+id/Deal_user"
+            android:layout_toRightOf="@id/deal_promo_after"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Utilisateur"
-            android:layout_below="@id/deal_image"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp">
+            android:alpha="0.5"
+            android:textStyle="bold">
         </TextView>
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_toLeftOf="@id/Deal_user"
+            android:id="@+id/user_image"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/logo_auchan"
             android:layout_below="@id/deal_image"
             android:layout_marginTop="10dp">
 
         </ImageView>
+        <TextView
+            android:id="@+id/Deal_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Utilisateur"
+            android:layout_toRightOf="@id/user_image"
+            android:layout_below="@id/deal_image"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:layout_marginLeft="2dp">
+        </TextView>
+
+
 
         <TextView
             android:id="@+id/deal_time"
@@ -88,27 +99,82 @@
             android:layout_marginTop="10dp">
         </TextView>
 
-        <TextView
-            android:id="@+id/deal_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Deal description..."
-            android:layout_toRightOf="@id/Deal_user"
-            android:layout_below="@id/deal_promo_after"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp">
-        </TextView>
 
         <TextView
             android:id="@+id/deal_link"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Deal_user"
             android:text="Voir plus"
             android:gravity="right"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true">
         </TextView>
+
+        <ImageView
+            android:id="@+id/thumb_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/outline_thumb_up_black_18dp"
+            android:layout_toRightOf="@id/Deal_user"
+            android:layout_below="@id/deal_image"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/thumb_up"
+            android:layout_below="@+id/deal_image"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="4dp"
+            android:text="1250"/>
+
+        <ImageView
+            android:id="@+id/thumb_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/outline_thumb_down_black_18dp"
+            android:layout_toRightOf="@id/thumb_up"
+            android:layout_below="@id/deal_image"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/thumb_down"
+            android:layout_below="@+id/deal_image"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="4dp"
+            android:text="50"/>
+
+        <ImageView
+            android:id="@+id/nbrs_user_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deal_time"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/outline_person_outline_black_18dp"
+            android:layout_marginRight="50dp">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/deal_time"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:text="4"
+            android:layout_marginRight="40dp"/>
 
     </RelativeLayout>
 
