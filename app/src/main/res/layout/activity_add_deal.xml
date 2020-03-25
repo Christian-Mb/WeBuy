@@ -159,6 +159,7 @@
             <TextView
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/blackTextColor"
                 android:text="Quantité disponible: "
                 android:textSize="20dp">
 
@@ -180,6 +181,7 @@
             <TextView
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/blackTextColor"
                 android:text="Quantité à acheté : "
                 android:textSize="20dp">
 
@@ -197,6 +199,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/add_qnt_achete"
+            android:textColor="@color/blackTextColor"
             android:text="Description :"
             android:textSize="25dp">
 
