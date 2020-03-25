@@ -9,13 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AddDeal"></activity>
         <activity
             android:name=".DashbordActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-        <activity
-            android:name=".DealActivity"/>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".DealActivity" />
         <activity
             android:name=".StartActivity"
             android:theme="@style/AppTheme.NoActionBar" />

@@ -5,7 +5,6 @@
     style="@style/loginCard"
     app:cardCornerRadius="@dimen/loginCardRadius"
     android:elevation="5dp"
-    android:layout_gravity="center"
     android:layout_marginTop="@dimen/loginViewsMargin"
     android:layout_marginBottom="@dimen/loginViewsMargin"
     android:background="@color/whiteCardColor">
