@@ -23,6 +23,28 @@
 
     <include layout="@layout/content_main3" />
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="23dp"
+            android:translationZ="6dp"
+            android:layout_gravity="end|right|bottom"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+
+
+            android:contentDescription="@string/submit"
+            android:src="@drawable/ic_add" />
+
+
+
+
+
+
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
@@ -36,5 +58,7 @@
         app:itemIconTint="@color/bottom_navigation_color"
         app:itemTextColor="@color/bottom_navigation_color"
         app:itemBackground="@color/bottomNavigationBackground"/>
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

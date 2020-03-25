@@ -9,95 +9,105 @@
 
     style="@style/parent.contentLayout">
 
-    <ScrollView
-        style="@style/parent"
+    <FrameLayout
+        android:id="@+id/content_main3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints">
 
-        <RelativeLayout
-            style="@style/parent">
+        <ScrollView
+            style="@style/parent"
+            tools:ignore="MissingConstraints">
 
+            <RelativeLayout
+                style="@style/parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="148dp"
-
-                android:layout_alignParentTop="true"
-                android:weightSum="12">
 
                 <LinearLayout
-                    style="@style/parent"
-                    android:background="@drawable/login_shape_bk"
-                    android:orientation="vertical"
-                    android:layout_weight="3">
+                    android:layout_width="match_parent"
+                    android:layout_height="148dp"
 
-                    <ImageView
+                    android:layout_alignParentTop="true"
+                    android:weightSum="12">
+
+                    <LinearLayout
                         style="@style/parent"
-                        android:background="@drawable/ic_login_bk"
-                        android:contentDescription="login background" />
+                        android:background="@drawable/login_shape_bk"
+                        android:orientation="vertical"
+                        android:layout_weight="3">
+
+                        <ImageView
+                            style="@style/parent"
+                            android:background="@drawable/ic_login_bk"
+                            android:contentDescription="login background" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:orientation="vertical"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginLeft="30dp">
+                </LinearLayout>
+            </RelativeLayout>
 
-            </LinearLayout>
+        </ScrollView>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingBottom="10dp"
+
+            android:translationZ="6dp"
+
+            android:gravity="bottom"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@color/primaryTextColor"
+            tools:ignore="MissingConstraints">
+
+
+
+
+
+
+
+
+
+            <TextView
+                style="@style/viewParent.headerText"
+
+                android:maxLines="1"
+                android:text="Magasins"
+                android:gravity="center"
+
+                android:layout_alignParentBottom="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_shopping_cart"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"/>
+
+
+
+
         </RelativeLayout>
 
-    </ScrollView>
+    </FrameLayout>
 
 
-
-
-    <RelativeLayout
-        android:id="@+id/rl"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:paddingBottom="10dp"
-
-        android:translationZ="6dp"
-
-        android:gravity="bottom"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:background="@color/primaryTextColor"
-        tools:ignore="MissingConstraints">
-
-
-
-
-
-
-
-
-
-        <TextView
-            style="@style/viewParent.headerText"
-
-            android:maxLines="1"
-            android:text="Magasins"
-            android:gravity="center"
-
-            android:layout_alignParentBottom="true"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_shopping_cart"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"/>
-
-
-
-
-    </RelativeLayout>
 
 
 
@@ -136,9 +146,21 @@
 
         </androidx.core.widget.NestedScrollView>
 
+
+
+
     </FrameLayout>
 
 
 
 
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

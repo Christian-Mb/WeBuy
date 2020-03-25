@@ -22,7 +22,7 @@
         android:title="Search" />
 
     <item
-        android:id="@+id/navigationMyProfile"
+        android:id="@+id/dashboard"
         android:icon="@drawable/baseline_dashboard_black_18dp"
         android:title="Dashboard" />
 

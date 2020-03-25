@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.MenuItem;
+import android.view.View;
 
 
 import androidx.annotation.Nullable;
@@ -18,7 +19,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class Main3Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -33,12 +36,12 @@ public class Main3Activity extends AppCompatActivity
         public boolean onNavigationItemSelected(@Nullable MenuItem item) {
             Fragment fragment = null;
             switch (item.getItemId()) {
-                case R.id.navigationMyProfile:
-                    fragment = new LoginFragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+                case R.id.dashboard:
+                    Intent intent = new Intent(getApplicationContext(),DashbordActivity.class);
+                    startActivity(intent);
                     break;
                 case R.id.navigationMyCourses:
-                    fragment = new RegisterFragment();
+                    fragment = new SuggestionFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case R.id.navigationHome:
@@ -46,7 +49,7 @@ public class Main3Activity extends AppCompatActivity
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case  R.id.navigationSearch:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+                    //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
                 case  R.id.navigationMenu:
                     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -86,6 +89,15 @@ public class Main3Activity extends AppCompatActivity
 
         bottomNavigationView.setSelectedItemId(R.id.navigationHome);
 
+        FloatingActionButton fab = findViewById(R.id.add);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
     }
 
     @Override
@@ -105,23 +117,29 @@ public class Main3Activity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_dark_mode) {
+        if (id == R.id.dark_mode) {
             //code for setting dark mode
             //true for dark mode, false for day mode, currently toggling on each click
             DarkModePrefManager darkModePrefManager = new DarkModePrefManager(this);
             darkModePrefManager.setDarkMode(!darkModePrefManager.isNightMode());
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             recreate();
+        } else if (id == R.id.edit_profile) {
+            Intent intent = new Intent(getApplicationContext(),Main4Activity.class);
+            startActivity(intent);
+
+
+        } else if (id == R.id.change_password) {
+            Intent intent = new Intent(getApplicationContext(),Main5Activity.class);
+            startActivity(intent);
+
+
+        } else if (id == R.id.notification) {
+
+        } else if (id == R.id.langage) {
+
+        } else if (id == R.id.logout) {
+
 
         }
 

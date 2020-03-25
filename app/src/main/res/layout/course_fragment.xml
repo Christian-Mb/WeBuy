@@ -4,5 +4,8 @@
     android:layout_height="match_parent">
 
 
+ <include layout="@layout/card_header"></include>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
