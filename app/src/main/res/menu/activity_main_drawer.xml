@@ -9,7 +9,7 @@
     <item
         android:id="@+id/dark_mode"
         android:icon="@drawable/ic_dark_mode"
-        android:title="Dark Mode"
+        android:title="@string/dark_mode"
         app:actionViewClass="android.widget.Switch"
         app:showAsAction="always"/>
 
@@ -21,25 +21,25 @@
 
                 android:id="@+id/edit_profile"
                 android:icon="@drawable/ic_edit_profile"
-                android:title="Edit Profile" />
+                android:title="@string/edit_profile" />
             />
             <item
                 android:id="@+id/change_password"
                 android:icon="@drawable/ic_edit_password"
 
-                android:title="Change Password" />
+                android:title="@string/change_password" />
             />
         </menu>
 
     </item>
 
-    <item android:title="Notifications">
+    <item android:title="@string/notifications">
         <menu>
             <item
                 android:id="@+id/notification"
                 android:icon="@drawable/ic_notifications"
 
-                android:title="Notifications"
+                android:title="@string/notifications"
                 app:actionViewClass="android.widget.Switch"
                 app:showAsAction="always">
 
@@ -47,12 +47,12 @@
         </menu>
     </item>
 
-    <item android:title="Feeback">
+    <item android:title="@string/feeback">
         <menu>
             <item
                 android:id="@+id/feedback"
                 android:icon="@drawable/ic_feegback"
-                android:title="Discuss with us" />
+                android:title="@string/discuss_with_us" />
             <item
                 android:id="@+id/logout"
                 android:icon="@drawable/ic_logout"

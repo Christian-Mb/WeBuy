@@ -22,7 +22,7 @@
 
         <TextView
             style="@style/headerTextPrimary"
-            android:text="Bienvenue"
+            android:text="@string/welcome"
             android:layout_marginTop="@dimen/loginViewsMargin"
             android:textSize="30dp"/>
 
@@ -41,13 +41,12 @@
         </ImageView>
 
 
-
         <TextView
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Moins chères et écologiques"
+            android:layout_gravity="center"
+            android:text="@string/hook"
 
 
             android:textAlignment="center"
@@ -63,7 +62,7 @@
             android:layout_marginTop="20dp"
             style="@style/loginButton"
 
-            android:text="S'indentifier / S'incrire"
+            android:text="@string/sign"
 
             />
 
@@ -81,7 +80,7 @@
             android:layout_height="65dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="6dp"
-            android:text="Voir les deals"
+            android:text="@string/see_the_deals"
             style="@style/loginButton"
 
             />

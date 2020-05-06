@@ -71,7 +71,7 @@
                         android:background="@drawable/profile_bk"/>
 
                     <TextView
-                        android:text="Back to\nHome"
+                        android:text="@string/back_to_home"
                         android:id="@+id/back"
                         style="@style/profileStyledBackButton" />
 

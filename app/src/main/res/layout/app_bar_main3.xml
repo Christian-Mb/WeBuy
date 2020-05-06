@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -12,37 +11,31 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
-            android:visibility="gone"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
+            android:visibility="gone"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_main3" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="23dp"
-            android:translationZ="6dp"
-            android:layout_gravity="end|right|bottom"
-            android:layout_marginBottom="60dp"
-            android:layout_marginRight="5dp"
-            android:clickable="true"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|right|bottom"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="60dp"
+        android:clickable="true"
+        android:contentDescription="@string/submit"
+        android:elevation="23dp"
 
 
-            android:contentDescription="@string/submit"
-            android:src="@drawable/ic_add" />
-
-
-
-
-
-
+        android:src="@drawable/ic_add"
+        android:translationZ="6dp" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -52,13 +45,12 @@
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
         android:foreground="?attr/selectableItemBackground"
-        app:menu="@menu/master_bottom_navigation"
         app:elevation="10dp"
-        app:labelVisibilityMode="labeled"
+        app:itemBackground="@color/bottomNavigationBackground"
         app:itemIconTint="@color/bottom_navigation_color"
         app:itemTextColor="@color/bottom_navigation_color"
-        app:itemBackground="@color/bottomNavigationBackground"/>
-
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/master_bottom_navigation" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -29,7 +29,7 @@
 
                 <TextView
                     android:id="@+id/currentPassword"
-                    android:text="Name"
+                    android:text="@string/name"
                     android:layout_toRightOf="@id/nameImageView"
                 style="@style/profileDetailsTextMain" />
 
@@ -49,7 +49,7 @@
                     style="@style/profileDetailsImage" />
 
                 <TextView
-                    android:text="Mobile"
+                    android:text="@string/mobile"
                     android:layout_toRightOf="@id/mobileImageView"
                     style="@style/profileDetailsTextMain"/>
 
@@ -69,7 +69,7 @@
                     style="@style/profileDetailsImage" />
 
                 <TextView
-                    android:text="Email"
+                    android:text="@string/email"
                     android:layout_toRightOf="@id/emailImageView"
                     style="@style/profileDetailsTextMain" />
 
@@ -89,7 +89,7 @@
                     style="@style/profileDetailsImage" />
 
                 <TextView
-                    android:text="Address"
+                    android:text="@string/address"
                     android:layout_toRightOf="@id/addressImageView"
                     style="@style/profileDetailsTextMain" />
 
@@ -109,7 +109,7 @@
                     style="@style/profileDetailsImage" />
 
                 <TextView
-                    android:text="D.O.B"
+                    android:text="@string/d_o_b"
                     android:layout_toRightOf="@id/dobImageView"
                     style="@style/profileDetailsTextMain" />
 
@@ -134,7 +134,7 @@
 
                     android:layout_marginTop="@dimen/loginViewsMargin"
 
-                    android:text="Save" />
+                    android:text="@string/save" />
             </LinearLayout>
 
         </LinearLayout>

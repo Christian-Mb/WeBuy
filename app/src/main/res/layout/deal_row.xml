@@ -27,7 +27,7 @@
         </ImageView>
         <TextView
             android:id="@+id/deal_title"
-            android:text="Deal Title"
+            android:text="@string/deal_title"
             android:layout_width="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
             android:id="@+id/Deal_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Utilisateur"
+            android:text="@string/user"
             android:layout_toRightOf="@id/user_image"
             android:layout_below="@id/deal_image"
             android:layout_marginTop="10dp"
@@ -105,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/Deal_user"
-            android:text="Voir plus"
+            android:text="@string/see_more"
             android:gravity="right"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
