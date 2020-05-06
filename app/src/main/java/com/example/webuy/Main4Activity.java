@@ -19,6 +19,7 @@ public class Main4Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_fragment);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("My Account");
         setSupportActionBar(toolbar);
        TextView rel = findViewById(R.id.back);
         Button btnSave = findViewById(R.id.btnSave);
@@ -33,6 +34,7 @@ public class Main4Activity extends AppCompatActivity {
         rel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //go back!
                 Intent intent = new Intent(getApplicationContext(),Main3Activity.class);
                 startActivity(intent);
             }

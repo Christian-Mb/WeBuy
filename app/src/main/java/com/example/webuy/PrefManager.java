@@ -1,6 +1,4 @@
-package com.example.webuy; /**
- * Created by kapil on 20/01/17.
- */
+package com.example.webuy;
 import android.content.Context;
 import android.content.SharedPreferences;
 

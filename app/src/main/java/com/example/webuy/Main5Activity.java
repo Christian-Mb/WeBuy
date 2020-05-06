@@ -17,6 +17,7 @@ public class Main5Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.password_fragment);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Edit Password");
         setSupportActionBar(toolbar);
        TextView rel = findViewById(R.id.back);
         Button btnSave = findViewById(R.id.btnSave);

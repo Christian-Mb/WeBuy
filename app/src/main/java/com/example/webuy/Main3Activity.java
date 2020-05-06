@@ -21,7 +21,6 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 
 public class Main3Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -136,7 +135,9 @@ public class Main3Activity extends AppCompatActivity
 
         } else if (id == R.id.notification) {
 
-        } else if (id == R.id.langage) {
+        } else if (id == R.id.feedback) {
+            Intent intent = new Intent(getApplicationContext(),CrispSDKActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.logout) {
 

@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -34,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener deal = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+            Intent intent = new Intent(getApplicationContext(), OnboardingActivity.class);
             startActivity(intent);
         }
     };
