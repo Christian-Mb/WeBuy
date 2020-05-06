@@ -2,16 +2,13 @@ package com.example.webuy;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.view.MenuItem;
 import android.view.View;
-
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.GravityCompat;
@@ -36,22 +33,22 @@ public class Main3Activity extends AppCompatActivity
             Fragment fragment = null;
             switch (item.getItemId()) {
                 case R.id.dashboard:
-                    Intent intent = new Intent(getApplicationContext(),DashbordActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), DashbordActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.navigationMyCourses:
                     fragment = new DealFragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
                     break;
                 case R.id.navigationHome:
                     fragment = new MagazinFragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
                     break;
-                case  R.id.navigationSearch:
+                case R.id.navigationSearch:
                     //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
                     break;
-                case  R.id.navigationMenu:
-                    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                case R.id.navigationMenu:
+                    DrawerLayout drawer = findViewById(R.id.drawer_layout);
                     drawer.openDrawer(GravityCompat.START);
                     break;
             }
@@ -62,13 +59,13 @@ public class Main3Activity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(new DarkModePrefManager(this).isNightMode()){
+        if (new DarkModePrefManager(this).isNightMode()) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
         setContentView(R.layout.activity_main3);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -77,7 +74,7 @@ public class Main3Activity extends AppCompatActivity
         toggle.syncState();
 
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         bottomNavigationView = findViewById(R.id.navigation);
@@ -92,7 +89,7 @@ public class Main3Activity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),AddDeal.class);
+                Intent intent = new Intent(getApplicationContext(), AddDeal.class);
                 startActivity(intent);
             }
         });
@@ -101,7 +98,7 @@ public class Main3Activity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -124,19 +121,19 @@ public class Main3Activity extends AppCompatActivity
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             recreate();
         } else if (id == R.id.edit_profile) {
-            Intent intent = new Intent(getApplicationContext(),Main4Activity.class);
+            Intent intent = new Intent(getApplicationContext(), Main4Activity.class);
             startActivity(intent);
 
 
         } else if (id == R.id.change_password) {
-            Intent intent = new Intent(getApplicationContext(),Main5Activity.class);
+            Intent intent = new Intent(getApplicationContext(), Main5Activity.class);
             startActivity(intent);
 
 
         } else if (id == R.id.notification) {
 
         } else if (id == R.id.feedback) {
-            Intent intent = new Intent(getApplicationContext(),CrispSDKActivity.class);
+            Intent intent = new Intent(getApplicationContext(), CrispSDKActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.logout) {
@@ -144,7 +141,7 @@ public class Main3Activity extends AppCompatActivity
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

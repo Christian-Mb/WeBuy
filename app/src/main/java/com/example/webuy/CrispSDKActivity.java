@@ -13,7 +13,7 @@ public class CrispSDKActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crisp_s_d_k);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Feeback");
         setSupportActionBar(toolbar);
         initCrispSDK();
@@ -26,8 +26,8 @@ public class CrispSDKActivity extends AppCompatActivity {
 
         //if (accountManager.isUserConnected()) {
 
-            //Crisp.User.setNickname(accountManager.getUser().username);
-           // Crisp.User.setEmail(accountManager.getUser().email);
+        //Crisp.User.setNickname(accountManager.getUser().username);
+        // Crisp.User.setEmail(accountManager.getUser().email);
         //}
 
         Crisp.Session.setData("plateform", "android");
@@ -36,7 +36,6 @@ public class CrispSDKActivity extends AppCompatActivity {
         Crisp.Session.setSegments("android");
 
     }
-
 
 
 }

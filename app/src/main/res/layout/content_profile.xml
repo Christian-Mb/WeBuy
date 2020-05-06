@@ -8,136 +8,143 @@
     tools:context=".Main3Activity"
     tools:showIn="@layout/profile_fragment">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/headerTextPrimary"
+            android:layout_marginBottom="20dp"
+            android:text="Account Info" />
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+
+            <ImageView
+                android:id="@+id/nameImageView"
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_edit_profile" />
 
             <TextView
-                style="@style/headerTextPrimary"
-                android:text="Account Info"
-                android:layout_marginBottom="20dp"/>
+                android:id="@+id/currentPassword"
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/nameImageView"
+                android:text="@string/name" />
 
-            <RelativeLayout style="@style/profileDetailsLayout">
-                <ImageView
-                    android:id="@+id/nameImageView"
-                    android:src="@drawable/ic_edit_profile"
-                    style="@style/profileDetailsImage" />
+            <EditText
+                style="@style/profileDetailsMiniText"
+                android:layout_marginTop="11dp"
+                android:layout_toRightOf="@id/nameImageView"
+                android:text="Christian Mada-Mbari" />
 
-                <TextView
-                    android:id="@+id/currentPassword"
-                    android:text="@string/name"
-                    android:layout_toRightOf="@id/nameImageView"
-                style="@style/profileDetailsTextMain" />
+        </RelativeLayout>
 
-                <EditText
-                    android:text="Christian Mada-Mbari"
-                    android:layout_marginTop="11dp"
-                    android:layout_toRightOf="@id/nameImageView"
-                    style="@style/profileDetailsMiniText" />
+        <View style="@style/proifleDetailsView" />
 
-            </RelativeLayout>
+        <RelativeLayout style="@style/profileDetailsLayout">
 
-            <View style="@style/proifleDetailsView" />
-            <RelativeLayout style="@style/profileDetailsLayout">
-                <ImageView
-                    android:id="@+id/mobileImageView"
-                    android:src="@drawable/ic_contact"
-                    style="@style/profileDetailsImage" />
+            <ImageView
+                android:id="@+id/mobileImageView"
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_contact" />
 
-                <TextView
-                    android:text="@string/mobile"
-                    android:layout_toRightOf="@id/mobileImageView"
-                    style="@style/profileDetailsTextMain"/>
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/mobileImageView"
+                android:text="@string/mobile" />
 
-                <EditText
-                    android:layout_marginTop="10dp"
-                    android:text="+33-0607213520"
-                    android:layout_toRightOf="@id/mobileImageView"
-                    style="@style/profileDetailsMiniText" />
+            <EditText
+                style="@style/profileDetailsMiniText"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/mobileImageView"
+                android:text="+33-0607213520" />
 
-            </RelativeLayout>
+        </RelativeLayout>
 
-            <View style="@style/proifleDetailsView" />
-            <RelativeLayout style="@style/profileDetailsLayout">
-                <ImageView
-                    android:id="@+id/emailImageView"
-                    android:src="@drawable/ic_mail"
-                    style="@style/profileDetailsImage" />
+        <View style="@style/proifleDetailsView" />
 
-                <TextView
-                    android:text="@string/email"
-                    android:layout_toRightOf="@id/emailImageView"
-                    style="@style/profileDetailsTextMain" />
+        <RelativeLayout style="@style/profileDetailsLayout">
 
-                <EditText
-                    android:text="christianmadambari@yahoo.fr"
-                    android:layout_marginTop="10dp"
-                    android:layout_toRightOf="@id/emailImageView"
-                    style="@style/profileDetailsMiniText" />
+            <ImageView
+                android:id="@+id/emailImageView"
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_mail" />
 
-            </RelativeLayout>
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/emailImageView"
+                android:text="@string/email" />
 
-            <View style="@style/proifleDetailsView" />
-            <RelativeLayout style="@style/profileDetailsLayout">
-                <ImageView
-                    android:id="@+id/addressImageView"
-                    android:src="@drawable/ic_address"
-                    style="@style/profileDetailsImage" />
+            <EditText
+                style="@style/profileDetailsMiniText"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/emailImageView"
+                android:text="christianmadambari@yahoo.fr" />
 
-                <TextView
-                    android:text="@string/address"
-                    android:layout_toRightOf="@id/addressImageView"
-                    style="@style/profileDetailsTextMain" />
+        </RelativeLayout>
 
-                <EditText
-                    android:text="Avenue 2nd Street NW SY."
-                    android:layout_marginTop="10dp"
-                    android:layout_toRightOf="@id/addressImageView"
-                    style="@style/profileDetailsMiniText" />
+        <View style="@style/proifleDetailsView" />
 
-            </RelativeLayout>
+        <RelativeLayout style="@style/profileDetailsLayout">
 
-            <View style="@style/proifleDetailsView" />
-            <RelativeLayout style="@style/profileDetailsLayout">
-                <ImageView
-                    android:id="@+id/dobImageView"
-                    android:src="@drawable/ic_calendar"
-                    style="@style/profileDetailsImage" />
+            <ImageView
+                android:id="@+id/addressImageView"
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_address" />
 
-                <TextView
-                    android:text="@string/d_o_b"
-                    android:layout_toRightOf="@id/dobImageView"
-                    style="@style/profileDetailsTextMain" />
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/addressImageView"
+                android:text="@string/address" />
 
-                <TextView
-                    android:text="12-03-2020"
-                    android:layout_toRightOf="@id/dobImageView"
-                    style="@style/profileDetailsMiniText" />
+            <EditText
+                style="@style/profileDetailsMiniText"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/addressImageView"
+                android:text="Avenue 2nd Street NW SY." />
 
-            </RelativeLayout>
+        </RelativeLayout>
 
-            <View style="@style/proifleDetailsView" />
+        <View style="@style/proifleDetailsView" />
 
-            <LinearLayout
-              style="@style/linearParent"
-                >
+        <RelativeLayout style="@style/profileDetailsLayout">
 
-                <Button
-                    android:id="@+id/btnSave"
-                    style="@style/loginButton"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="20dp"
+            <ImageView
+                android:id="@+id/dobImageView"
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_calendar" />
 
-                    android:layout_marginTop="@dimen/loginViewsMargin"
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/dobImageView"
+                android:text="@string/d_o_b" />
 
-                    android:text="@string/save" />
-            </LinearLayout>
+            <TextView
+                style="@style/profileDetailsMiniText"
+                android:layout_toRightOf="@id/dobImageView"
+                android:text="12-03-2020" />
 
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+
+        <LinearLayout style="@style/linearParent">
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/loginButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+
+                android:layout_marginBottom="20dp"
+
+                android:text="@string/save" />
         </LinearLayout>
+
+    </LinearLayout>
 
 
 </androidx.core.widget.NestedScrollView>

@@ -10,22 +10,12 @@
     tools:showIn="@layout/activity_dashbord">
 
 
-
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true">
-
-
-
-
-
-
-
-
 
 
         <LinearLayout
@@ -34,15 +24,11 @@
 
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/piechart"
-                android:layout_marginTop="215dp"
                 android:layout_width="match_parent"
-                android:layout_height="350dp" />
+                android:layout_height="350dp"
+                android:layout_marginTop="215dp" />
 
         </LinearLayout>
-
-
-
-
 
 
     </LinearLayout>

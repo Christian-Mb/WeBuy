@@ -5,11 +5,12 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 import com.github.mikephil.charting.charts.ScatterChart;
 import com.github.mikephil.charting.data.BarData;
@@ -34,17 +35,18 @@ import java.util.ArrayList;
 @SuppressWarnings({"SameParameterValue", "WeakerAccess"})
 public abstract class SimpleFragment extends Fragment {
 
-    private Typeface tf;
+    private final String[] mLabels = new String[]{"Company A", "Company B", "Company C", "Company D", "Company E", "Company F"};
     protected Context context;
+    private Typeface tf;
+
+    public SimpleFragment() {
+
+    }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         this.context = context;
-    }
-
-    public SimpleFragment() {
-
     }
 
     @Override
@@ -57,11 +59,11 @@ public abstract class SimpleFragment extends Fragment {
 
         ArrayList<IBarDataSet> sets = new ArrayList<>();
 
-        for(int i = 0; i < dataSets; i++) {
+        for (int i = 0; i < dataSets; i++) {
 
             ArrayList<BarEntry> entries = new ArrayList<>();
 
-            for(int j = 0; j < count; j++) {
+            for (int j = 0; j < count; j++) {
                 entries.add(new BarEntry(j, (float) (Math.random() * range) + range / 4));
             }
 
@@ -81,11 +83,11 @@ public abstract class SimpleFragment extends Fragment {
 
         ScatterChart.ScatterShape[] shapes = ScatterChart.ScatterShape.getAllDefaultShapes();
 
-        for(int i = 0; i < dataSets; i++) {
+        for (int i = 0; i < dataSets; i++) {
 
             ArrayList<Entry> entries = new ArrayList<>();
 
-            for(int j = 0; j < count; j++) {
+            for (int j = 0; j < count; j++) {
                 entries.add(new Entry(j, (float) (Math.random() * range) + range / 4));
             }
 
@@ -104,6 +106,7 @@ public abstract class SimpleFragment extends Fragment {
 
     /**
      * generates less data (1 DataSet, 4 values)
+     *
      * @return PieData
      */
     protected PieData generatePieData() {
@@ -112,8 +115,8 @@ public abstract class SimpleFragment extends Fragment {
 
         ArrayList<PieEntry> entries1 = new ArrayList<>();
 
-        for(int i = 0; i < count; i++) {
-            entries1.add(new PieEntry((float) ((Math.random() * 60) + 40), "Quarter " + (i+1)));
+        for (int i = 0; i < count; i++) {
+            entries1.add(new PieEntry((float) ((Math.random() * 60) + 40), "Quarter " + (i + 1)));
         }
 
         PieDataSet ds1 = new PieDataSet(entries1, "Dashboard 2015");
@@ -191,8 +194,6 @@ public abstract class SimpleFragment extends Fragment {
         d.setValueTypeface(tf);
         return d;
     }
-
-    private final String[] mLabels = new String[] { "Company A", "Company B", "Company C", "Company D", "Company E", "Company F" };
 
     private String getLabel(int i) {
         return mLabels[i];

@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,7 +19,7 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
     String[] dDescription;
     int[] dCodePostal;
 
-    public DealListAdapter(Context c, String[] dTitle, String[] dDescription, int[] dCodePostal){
+    public DealListAdapter(Context c, String[] dTitle, String[] dDescription, int[] dCodePostal) {
         this.context = c;
         this.dTitle = dTitle;
         this.dDescription = dDescription;
@@ -37,7 +36,7 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
         viewHolder.item_deal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context,DealActivity.class));
+                context.startActivity(new Intent(context, DealActivity.class));
             }
         });
         return new DealListAdapter.MyViewHolder(view);

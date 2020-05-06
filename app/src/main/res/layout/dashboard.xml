@@ -7,15 +7,15 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".DashbordActivity"
     tools:showIn="@layout/activity_dashbord">
- <FrameLayout
-     android:id="@+id/dashAct"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     tools:ignore="MissingConstraints">
+
+    <FrameLayout
+        android:id="@+id/dashAct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
 
 
- </FrameLayout>
-
+    </FrameLayout>
 
 
 </androidx.core.widget.NestedScrollView>

@@ -1,10 +1,10 @@
 package com.example.webuy;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DealActivity extends AppCompatActivity {
 

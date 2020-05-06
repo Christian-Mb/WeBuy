@@ -16,10 +16,10 @@ public class DealFragment extends Fragment {
     View v;
     RecyclerView recyclerView;
     String[] dTitle = {"Lait ", "Cristalline", "PS4", "M&M'S", "Machin", "Et", "Bidule"};
-    String[] dDescription = {"Une description","Une description","Une description","Une description","Une description","Une description","Une description"};
-    int[] dCodePostal = {37,95,44,45,12,78,14};
+    String[] dDescription = {"Une description", "Une description", "Une description", "Une description", "Une description", "Une description", "Une description"};
+    int[] dCodePostal = {37, 95, 44, 45, 12, 78, 14};
 
-    public DealFragment(){
+    public DealFragment() {
 
     }
 

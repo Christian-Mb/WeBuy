@@ -20,8 +20,7 @@ public class MagazinAdapter extends RecyclerView.Adapter<MagazinAdapter.MyViewHo
     Context context;
 
 
-
-    public MagazinAdapter(Context ct, String[] titre, String[] quantite, int[] logo){
+    public MagazinAdapter(Context ct, String[] titre, String[] quantite, int[] logo) {
         this.context = ct;
         this.titre = titre;
         this.quantite = quantite;
@@ -41,7 +40,7 @@ public class MagazinAdapter extends RecyclerView.Adapter<MagazinAdapter.MyViewHo
                 Fragment selectedFragment = new DealFragment();
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
                 DealFragment DealFragment = new DealFragment();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,DealFragment).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, DealFragment).addToBackStack(null).commit();
             }
 
         });
@@ -51,7 +50,7 @@ public class MagazinAdapter extends RecyclerView.Adapter<MagazinAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MagazinAdapter.MyViewHolder holder, int position) {
         holder.title.setText(titre[position]);
-        holder.quantite.setText("Promo : "+ quantite[position]);
+        holder.quantite.setText("Promo : " + quantite[position]);
         holder.logo.setImageResource(logo[position]);
     }
 

@@ -2,15 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
 
-    android:orientation="vertical"
+    style="@style/loginParent"
 
-    style="@style/loginParent">
+    android:orientation="vertical">
 
-    <ScrollView
-        style="@style/parent">
+    <ScrollView style="@style/parent">
 
-        <RelativeLayout
-            style="@style/parent">
+        <RelativeLayout style="@style/parent">
 
 
             <LinearLayout
@@ -21,9 +19,9 @@
 
                 <LinearLayout
                     style="@style/parent"
+                    android:layout_weight="3"
                     android:background="@drawable/login_shape_bk"
-                    android:orientation="vertical"
-                    android:layout_weight="3">
+                    android:orientation="vertical">
 
                     <ImageView
                         style="@style/parent"

@@ -2,14 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
 
-    android:orientation="vertical"
-    style="@style/loginParent">
+    style="@style/loginParent"
+    android:orientation="vertical">
 
-    <ScrollView
-        style="@style/parent">
+    <ScrollView style="@style/parent">
 
-        <RelativeLayout
-            style="@style/parent">
+        <RelativeLayout style="@style/parent">
 
 
             <LinearLayout
@@ -20,9 +18,9 @@
 
                 <LinearLayout
                     style="@style/parent"
+                    android:layout_weight="3"
                     android:background="@drawable/login_shape_bk"
-                    android:orientation="vertical"
-                    android:layout_weight="3">
+                    android:orientation="vertical">
 
                     <ImageView
                         style="@style/parent"
@@ -37,22 +35,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true"
-                android:orientation="vertical"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginLeft="30dp">
+                android:orientation="vertical">
 
 
                 <TextView
                     style="@style/headerText"
                     android:layout_gravity="center"
-                    android:text="WeBuy"
-                    android:layout_marginTop="40dp"/>
-                <include
-                    layout="@layout/layout_register"/>
+                    android:layout_marginTop="40dp"
+                    android:text="WeBuy" />
+
+                <include layout="@layout/layout_register" />
 
             </LinearLayout>
-            </RelativeLayout>
+        </RelativeLayout>
 
     </ScrollView>
 

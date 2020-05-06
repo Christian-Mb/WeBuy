@@ -1,26 +1,14 @@
 package com.example.webuy;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button bnSign = findViewById(R.id.btnConnect);
-        Button deals= findViewById(R.id.btnDeal);
-        deals.setOnClickListener(deal);
-        bnSign.setOnClickListener(connect);
-        ImageView img = findViewById(R.id.imageAccueil);
-        img.setImageDrawable(getDrawable(R.drawable.accueil));
-    }
+public class MainActivity extends AppCompatActivity {
 
     View.OnClickListener connect = new View.OnClickListener() {
         @Override
@@ -36,4 +24,16 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Button bnSign = findViewById(R.id.btnConnect);
+        Button deals = findViewById(R.id.btnDeal);
+        deals.setOnClickListener(deal);
+        bnSign.setOnClickListener(connect);
+        ImageView img = findViewById(R.id.imageAccueil);
+        img.setImageDrawable(getDrawable(R.drawable.accueil));
+    }
 }

@@ -2,23 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/darkModeBackground">
+    android:background="@color/darkModeBackground"
+    android:orientation="vertical">
 
     <ImageView
-        android:layout_margin="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
         android:adjustViewBounds="true"
         android:cropToPadding="true"
-        android:layout_centerInParent="true"
         android:src="@drawable/onboarding_welcome" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
 
         <TextView
             style="@style/onBoardingHeaderText"
@@ -26,7 +26,7 @@
 
         <TextView
             style="@style/onBoardingContentText"
-            android:text="@string/onboardingWelcomeContent"/>
+            android:text="@string/onboardingWelcomeContent" />
 
     </LinearLayout>
 

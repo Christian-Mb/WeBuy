@@ -4,21 +4,18 @@ package com.example.webuy;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
-
 
 
 /**
@@ -29,13 +26,12 @@ import com.github.mikephil.charting.components.Legend;
 public class DashboardFragment extends SimpleFragment {
 
 
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container,
                              @NonNull Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
-        PieChart chart = (PieChart) view.findViewById(R.id.piechart);
+        PieChart chart = view.findViewById(R.id.piechart);
         chart.getDescription().setEnabled(false);
 
         Typeface tf = Typeface.createFromAsset(context.getAssets(), "OpenSans-Light.ttf");

@@ -6,17 +6,14 @@ import android.content.SharedPreferences;
 
 
 public class DarkModePrefManager {
+    // Shared preferences file name
+    private static final String PREF_NAME = "education-dark-mode";
+    private static final String IS_NIGHT_MODE = "IsNightMode";
     SharedPreferences pref;
     SharedPreferences.Editor editor;
     Context _context;
-
     // shared pref mode
     int PRIVATE_MODE = 0;
-
-    // Shared preferences file name
-    private static final String PREF_NAME = "education-dark-mode";
-
-    private static final String IS_NIGHT_MODE = "IsNightMode";
 
 
     public DarkModePrefManager(Context context) {

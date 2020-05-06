@@ -19,7 +19,7 @@ public class MagazinFragment extends Fragment {
     String[] mQuantite = {"12", "8", "15", "3"};
     int[] logo = {R.drawable.logo_auchan, R.drawable.logo_leclerc, R.drawable.logo_carrefour, R.drawable.logo_u};
 
-    public MagazinFragment(){
+    public MagazinFragment() {
 
     }
 

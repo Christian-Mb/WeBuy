@@ -8,11 +8,11 @@
         android:id="@+id/card_view"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        card_view:cardElevation="5dp"
-        card_view:cardCornerRadius="7dp"
+        android:layout_margin="@dimen/card_margin"
         card_view:cardBackgroundColor="@color/whiteBodyColor"
-        card_view:cardPreventCornerOverlap="false"
-        android:layout_margin="@dimen/card_margin">
+        card_view:cardCornerRadius="7dp"
+        card_view:cardElevation="5dp"
+        card_view:cardPreventCornerOverlap="false">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -23,18 +23,18 @@
                 android:id="@+id/productThubnail"
                 android:layout_width="200dp"
                 android:layout_height="170dp"
-                android:src="@drawable/product_image"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/product_image" />
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/productThubnail"
-                android:textColor="@color/frutorial_title"
                 android:layout_margin="5dp"
                 android:maxLines="1"
                 android:text="50% for 2 products"
+                android:textColor="@color/frutorial_title"
                 android:textSize="@dimen/frutorial_title"
                 android:textStyle="bold" />
 
@@ -46,16 +46,17 @@
                 android:layout_below="@id/title"
                 android:layout_marginLeft="5dp"
                 android:rating="5" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Price : $15.30"
                 android:layout_below="@id/title"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:textColor="#000"
+                android:layout_alignParentRight="true"
                 android:layout_marginRight="5dp"
-                android:layout_alignParentRight="true"/>
+                android:text="Price : $15.30"
+                android:textColor="#000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

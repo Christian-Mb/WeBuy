@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".CrispSDKActivity"
     android:background="@color/profileBackground"
-    android:orientation="horizontal">
+    android:fitsSystemWindows="true"
+    android:orientation="horizontal"
+    tools:context=".CrispSDKActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"

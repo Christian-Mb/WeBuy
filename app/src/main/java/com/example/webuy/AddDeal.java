@@ -1,13 +1,10 @@
 package com.example.webuy;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import java.util.ArrayList;
-import java.util.List;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AddDeal extends AppCompatActivity {
 

@@ -1,54 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cardview"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:paddingTop="10dp"
-    android:paddingBottom="10dp"
-    android:layout_height="wrap_content">
+    android:paddingBottom="10dp">
 
     <RelativeLayout
 
         android:id="@+id/rl_main_content"
-        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_width="wrap_content"
         android:background="@drawable/shape"
-        android:layout_height="120dp"
+        android:gravity="center_vertical"
         android:translationZ="6dp">
 
 
         <ImageView
             android:id="@+id/logo"
-            android:src="@drawable/logo_auchan"
-            android:layout_marginStart="10dp"
             android:layout_width="60dp"
-            android:layout_height="60dp">
-        </ImageView>
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/logo_auchan"></ImageView>
 
         <TextView
             android:id="@+id/EnseigneText"
-            android:text="Auchan"
-            android:layout_toRightOf="@id/logo"
             android:layout_width="fill_parent"
-            android:gravity="center"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_height="wrap_content">
-        </TextView>
+            android:layout_toRightOf="@id/logo"
+            android:gravity="center"
+            android:text="Auchan"></TextView>
 
         <TextView
             android:id="@+id/PromoText"
-            android:text="Promo : 12"
-            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_toRightOf="@id/logo"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:gravity="center"
+            android:text="Promo : 12">
 
         </TextView>
 
     </RelativeLayout>
-
 
 
 </LinearLayout>

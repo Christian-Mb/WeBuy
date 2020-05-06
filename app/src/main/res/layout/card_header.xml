@@ -1,8 +1,8 @@
-<RelativeLayout android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginTop="20dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -28,13 +28,13 @@
                 android:text="Shop now with others, \nand pay with them"
                 android:textColor="@color/whiteBodyColor"
                 android:textSize="17sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
                 android:text="Introducing collective  \npayment for shopping."
                 android:textColor="@color/whiteBodyColor"
                 android:textSize="13sp"
@@ -47,9 +47,9 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
         android:adjustViewBounds="true"
         android:cropToPadding="true"
-        android:layout_centerVertical="true"
         android:elevation="44dp"
         android:src="@drawable/hero_image" />
 </RelativeLayout>
