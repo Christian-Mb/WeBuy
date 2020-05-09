@@ -5,14 +5,12 @@
     tools:showIn="navigation_view">
 
 
-
     <item
         android:id="@+id/dark_mode"
         android:icon="@drawable/ic_dark_mode"
         android:title="@string/dark_mode"
         app:actionViewClass="android.widget.Switch"
-        app:showAsAction="always"/>
-
+        app:showAsAction="always" />
 
 
     <item android:title="Profile">
