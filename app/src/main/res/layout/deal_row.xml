@@ -28,7 +28,7 @@
         </ImageView>
 
         <TextView
-            android:id="@+id/deal_title"
+            android:id="@+id/EnseigneText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -42,7 +42,7 @@
             android:id="@+id/deal_promo_after"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/deal_title"
+            android:layout_below="@id/EnseigneText"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="7dp"
             android:layout_toRightOf="@id/deal_image"
@@ -54,7 +54,7 @@
             android:id="@+id/deal_promo_before"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/deal_title"
+            android:layout_below="@id/EnseigneText"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/deal_promo_after"

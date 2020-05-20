@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/rl_main_content_deal">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:paddingBottom="5dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/img"
+                    android:layout_width="131dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFF"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/deal_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:src="@drawable/logo_auchan">
+
+                    </ImageView>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="168dp">
+
+                    <TextView
+                        android:id="@+id/EnseigneText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+
+                        android:text="@string/deal_title"
+                        android:textColor="@color/whiteBodyColor"
+                        android:textSize="25dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/deal_promo_after"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/EnseigneText"
+
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="5€"
+                        android:textColor="#ff1100"
+                        android:textSize="20dp"></TextView>
+
+                    <TextView
+                        android:id="@+id/deal_promo_before"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/EnseigneText"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/deal_promo_after"
+                        android:alpha="0.5"
+                        android:text="10€"
+                        android:textSize="20dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/deal_time"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:gravity="right"
+                        android:text="35 min"
+                        android:textSize="18dp"></TextView>
+
+                    <TextView
+                        android:id="@+id/deal_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="right"
+                        android:text="@string/see_more"></TextView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/user_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignBottom="@+id/deal_link"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:elevation="12dp"
+
+                        android:innerRadius="0dp"
+
+                        android:shape="ring"
+                        android:thicknessRatio="1.9"
+                        app:cardCornerRadius="50dp">
+
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:tint="@color/darkModeBackground"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_user"></ImageView>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        android:id="@+id/Deal_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/deal_link"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/user_image"
+                        android:text="@string/user"
+                        android:textSize="12dp"></TextView>
+
+                    <ImageView
+                        android:id="@+id/thumb_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/deal_link"
+                        android:layout_marginLeft="80dp"
+                        android:tint="@color/darkModeBackground"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/outline_thumb_up_black_18dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/deal_stock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/deal_promo_after"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/quantity_available"
+                        android:textColor="@color/profileAccentColor"
+                        android:textSize="14dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/quantity_available"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/deal_promo_after"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="55dp"
+                        android:text="20"
+                        android:textColor="@color/profileAccentColor"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/quantity_to_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/quantity_available"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="55dp"
+                        android:text="4"
+                        android:textColor="@color/profileAccentColor"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/deal_min_purshase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/deal_stock"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/quantity_to_buy"
+                        android:textColor="@color/profileAccentColor"
+
+                        android:textSize="14dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/deal_link"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="15dp"
+                        android:textSize="12dp"
+                        android:textColor="@color/darkModeBackground"
+                        android:layout_toRightOf="@id/thumb_up"
+                        android:text="1250" />
+
+                    <ImageView
+                        android:id="@+id/thumb_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/deal_link"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@id/thumb_up"
+                        android:src="@drawable/outline_thumb_down_black_18dp"
+                        android:tint="#ff1100">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/deal_link"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="15dp"
+                        android:textSize="12dp"
+                        android:layout_toRightOf="@id/thumb_down"
+                        android:text="50"
+                        android:textColor="#ff1100" />
+
+                    <ImageView
+                        android:id="@+id/nbrs_user_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/deal_time"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="50dp"
+                        android:src="@drawable/ic_purshase_group"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/deal_time"
+
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginRight="30dp"
+                        android:text="4"
+                        android:textSize="18dp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="83dp" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+

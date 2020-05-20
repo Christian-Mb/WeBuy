@@ -13,11 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MagazinFragment extends Fragment {
 
-    View v;
-    RecyclerView recyclerView;
-    String[] mTitle = {"Auchan", "Leclerc", "Carrefour", "Super U"};
-    String[] mQuantite = {"12", "8", "15", "3"};
-    int[] logo = {R.drawable.logo_auchan, R.drawable.logo_leclerc, R.drawable.logo_carrefour, R.drawable.logo_u};
+   private View v;
+   private RecyclerView recyclerView;
+   private String[] mTitle = {"Auchan", "Leclerc", "Carrefour", "Super U"};
+   private String[] mQuantiteDeals = {"12", "50", "25", "34"};
+   private String[] mQuantiteStores = {"34", "12", "45", "21"};
+
+   private int[] logo = {R.drawable.logo_auchan, R.drawable.logo_leclerc, R.drawable.logo_carrefour, R.drawable.logo_u};
 
     public MagazinFragment() {
 
@@ -30,7 +32,7 @@ public class MagazinFragment extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.magazinRecyclerView);
 
-        MagazinAdapter magazinAdapter = new MagazinAdapter(getContext(), mTitle, mQuantite, logo);
+        MagazinAdapter magazinAdapter = new MagazinAdapter(getContext(), mTitle, mQuantiteDeals,mQuantiteStores, logo);
         recyclerView.setAdapter(magazinAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);

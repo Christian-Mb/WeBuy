@@ -30,7 +30,7 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
     @Override
     public DealListAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.deal_row, parent, false);
+        View view = inflater.inflate(R.layout.deal_cardview, parent, false);
         MyViewHolder viewHolder = new MyViewHolder(view);
 
         viewHolder.item_deal.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +60,7 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             item_deal = itemView.findViewById(R.id.rl_main_content_deal);
-            title = itemView.findViewById(R.id.deal_title);
+            title = itemView.findViewById(R.id.EnseigneText);
             promo_before = itemView.findViewById(R.id.deal_promo_before);
             promo_before.setPaintFlags(promo_before.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         }

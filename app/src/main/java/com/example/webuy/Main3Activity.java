@@ -60,7 +60,7 @@ public class Main3Activity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (new DarkModePrefManager(this).isNightMode()) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
         setContentView(R.layout.activity_main3);
 
@@ -118,7 +118,7 @@ public class Main3Activity extends AppCompatActivity
             //true for dark mode, false for day mode, currently toggling on each click
             DarkModePrefManager darkModePrefManager = new DarkModePrefManager(this);
             darkModePrefManager.setDarkMode(!darkModePrefManager.isNightMode());
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             recreate();
         } else if (id == R.id.edit_profile) {
             Intent intent = new Intent(getApplicationContext(), Main4Activity.class);

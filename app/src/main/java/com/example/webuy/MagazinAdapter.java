@@ -15,15 +15,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MagazinAdapter extends RecyclerView.Adapter<MagazinAdapter.MyViewHolder> {
 
-    String[] titre, quantite;
+    String[] titre, dealsNumber, storesNumber;
     int[] logo;
     Context context;
 
 
-    public MagazinAdapter(Context ct, String[] titre, String[] quantite, int[] logo) {
+    public MagazinAdapter(Context ct, String[] titre, String[] dealsNumber, String[] storesNumber, int[] logo) {
         this.context = ct;
         this.titre = titre;
-        this.quantite = quantite;
+        this.dealsNumber = dealsNumber;
+        this.storesNumber = storesNumber;
         this.logo = logo;
     }
 
@@ -50,7 +51,8 @@ public class MagazinAdapter extends RecyclerView.Adapter<MagazinAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MagazinAdapter.MyViewHolder holder, int position) {
         holder.title.setText(titre[position]);
-        holder.quantite.setText("Promo : " + quantite[position]);
+        holder.dealsNumber.setText(dealsNumber[position]);
+        holder.storesNumber.setText(storesNumber[position]);
         holder.logo.setImageResource(logo[position]);
     }
 
@@ -61,7 +63,7 @@ public class MagazinAdapter extends RecyclerView.Adapter<MagazinAdapter.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView title, quantite;
+        TextView title, dealsNumber, storesNumber;
         ImageView logo;
         RelativeLayout item_magazin;
 
@@ -69,7 +71,8 @@ public class MagazinAdapter extends RecyclerView.Adapter<MagazinAdapter.MyViewHo
             super(itemView);
             item_magazin = itemView.findViewById(R.id.rl_main_content);
             title = itemView.findViewById(R.id.EnseigneText);
-            quantite = itemView.findViewById(R.id.PromoText);
+            dealsNumber = itemView.findViewById(R.id.current_deals);
+            storesNumber = itemView.findViewById(R.id.stores_numbers);
             logo = itemView.findViewById(R.id.logo);
         }
     }
