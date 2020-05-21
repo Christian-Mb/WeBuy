@@ -2,45 +2,56 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="20dp">
+    android:layout_marginTop="10dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
         android:minHeight="200dp"
-        app:cardBackgroundColor="#A72683"
         app:cardCornerRadius="16dp"
-        app:cardElevation="10dp"
+        app:cardElevation="6dp"
         app:cardPreventCornerOverlap="false">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="vertical"
-            android:padding="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:minHeight="200dp"
+            android:background="@drawable/shape">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Shop now with others, \nand pay with them"
-                android:textColor="@color/whiteBodyColor"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:text="Introducing collective  \npayment for shopping."
-                android:textColor="@color/whiteBodyColor"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shop_now_with_others_nand_pay_with_them"
+                    android:textColor="@color/whiteBodyColor"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Introducing collective  \npayment for shopping."
+                    android:textColor="@color/whiteBodyColor"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
     </androidx.cardview.widget.CardView>
 
     <ImageView
@@ -49,6 +60,8 @@
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:adjustViewBounds="true"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
         android:cropToPadding="true"
         android:elevation="44dp"
         android:src="@drawable/hero_image" />

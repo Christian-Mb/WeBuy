@@ -13,14 +13,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MagazinAdapter extends RecyclerView.Adapter<MagazinAdapter.MyViewHolder> {
+public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.MyViewHolder> {
 
     String[] titre, dealsNumber, storesNumber;
     int[] logo;
     Context context;
 
 
-    public MagazinAdapter(Context ct, String[] titre, String[] dealsNumber, String[] storesNumber, int[] logo) {
+    public StoreAdapter(Context ct, String[] titre, String[] dealsNumber, String[] storesNumber, int[] logo) {
         this.context = ct;
         this.titre = titre;
         this.dealsNumber = dealsNumber;
@@ -30,7 +30,7 @@ public class MagazinAdapter extends RecyclerView.Adapter<MagazinAdapter.MyViewHo
 
     @NonNull
     @Override
-    public MagazinAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public StoreAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         final View view = inflater.inflate(R.layout.match_row, parent, false);
         MyViewHolder viewHolder = new MyViewHolder(view);
@@ -49,7 +49,7 @@ public class MagazinAdapter extends RecyclerView.Adapter<MagazinAdapter.MyViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MagazinAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull StoreAdapter.MyViewHolder holder, int position) {
         holder.title.setText(titre[position]);
         holder.dealsNumber.setText(dealsNumber[position]);
         holder.storesNumber.setText(storesNumber[position]);

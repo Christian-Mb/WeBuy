@@ -77,6 +77,8 @@ Swipe again to the right to return to the reception. </string>
     <string name="store_title">Store title</string>
     <string name="current_deals">Current deals :</string>
     <string name="stores_number">Stores\'s number :</string>
+    <string name="shop_now_with_others_nand_pay_with_them">Shop now with others, \nand pay with them</string>
+    <string name="favorite_deals">Favorite deals</string>
 
     <string-array name="magazin">
         <item>Magazin</item>

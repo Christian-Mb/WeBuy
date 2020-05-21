@@ -39,10 +39,12 @@ public class Main3Activity extends AppCompatActivity
                 case R.id.navigationMyCourses:
                     fragment = new DealFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+
                     break;
                 case R.id.navigationHome:
-                    fragment = new MagazinFragment();
+                    fragment = new HomeFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+
                     break;
                 case R.id.navigationSearch:
                     //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();

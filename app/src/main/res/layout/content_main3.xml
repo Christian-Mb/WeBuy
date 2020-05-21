@@ -16,6 +16,7 @@
 
         <ScrollView
             style="@style/parent"
+
             tools:ignore="MissingConstraints">
 
             <RelativeLayout style="@style/parent">
@@ -63,13 +64,13 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/primaryTextColor"
-
+            android:elevation="20dp"
             android:gravity="bottom"
 
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:translationZ="6dp"
+            android:translationZ="10dp"
             tools:ignore="MissingConstraints">
 
 
