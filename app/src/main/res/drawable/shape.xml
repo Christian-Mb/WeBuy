@@ -8,14 +8,9 @@
             <!-- CONTENT LAYER -->
             <item android:bottom="0dp" android:right="0dp">
                 <shape>
-                    <gradient
-                        android:angle="90"
-                        android:centerX="35%"
-                        android:endColor="#045DE9
-"
-                        android:startColor="#1FD1F9
-"
-                        android:type="linear" />
+                    <gradient android:angle="90" android:centerX="35%" android:endColor="#045DE9
+" android:startColor="#1FD1F9
+" android:type="linear" />
                     <corners android:radius="7dp" />
                 </shape>
             </item>

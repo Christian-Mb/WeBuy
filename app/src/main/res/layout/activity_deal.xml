@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/details_deal_fragment"
-    tools:context=".DealActivity">
+    tools:context=".DealActivity"
+    tools:showIn="@layout/details_deal_fragment">
 
     <RelativeLayout
         android:id="@+id/relative_layout"
@@ -100,23 +100,23 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@id/deal_image_detail"
+            android:text="Christian"
             android:textColor="@color/blackTextColor"
             android:textSize="20dp"
-            android:textStyle="bold"
-            android:text="Delal"></TextView>
+            android:textStyle="bold"></TextView>
 
         <TextView
             android:id="@+id/deal_description"
             android:layout_width="match_parent"
-            android:layout_below="@id/viewD"
-            android:paddingLeft="7dp"
-            android:paddingTop="7dp"
-            android:paddingRight="7dp"
             android:layout_height="wrap_content"
-            android:paddingBottom="7dp"
+            android:layout_below="@id/viewD"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:paddingLeft="7dp"
+            android:paddingTop="7dp"
+            android:paddingRight="7dp"
+            android:paddingBottom="7dp"
             android:text="Description :
 Consolidez votre alimentation électrique - 12 prises AC et 6 ports USB répondent à tous vos besoins d'alimentation
 Technologie de charge adaptative AiPower - Réglée pour fournir le taux de recharge maximum le plus sûr pour tous vos périphériques alimentés par USB, jusqu'à 2,4 A par port (6A maximum au total)
@@ -332,9 +332,9 @@ Technologie de charge adaptative AiPower - Réglée pour fournir le taux de rech
             android:src="@drawable/ic_pencil"></ImageView>
 
         <TextView
+            android:id="@+id/editedAt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editedAt"
             android:layout_below="@id/publishedAt"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
@@ -362,10 +362,10 @@ Technologie de charge adaptative AiPower - Réglée pour fournir le taux de rech
             android:layout_below="@id/description_underline"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="12dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/login_button_bk"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:text="@string/create_or_join_a_purshase_groupe">
 
         </Button>
@@ -373,13 +373,13 @@ Technologie de charge adaptative AiPower - Réglée pour fournir le taux de rech
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_below="@id/description_underline"
+            android:layout_alignParentEnd="true"
             android:layout_marginLeft="7dp"
             android:layout_marginTop="12dp"
             android:layout_marginRight="7dp"
-            android:layout_toRightOf="@+id/BtnParticipate"
             android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@+id/BtnParticipate"
             android:src="@drawable/baseline_chat_black_18dp">
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>

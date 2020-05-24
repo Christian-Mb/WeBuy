@@ -3,17 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginTop="50dp"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp">
 
     <View
         android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="100dp"
 
-        android:background="@color/whiteBodyColor" >
+        android:background="@color/whiteBodyColor">
 
     </View>
+
     <LinearLayout
         android:id="@+id/separate"
 
@@ -26,49 +27,47 @@
 
     <RelativeLayout
         android:id="@+id/view_stores"
-        app:layout_constraintTop_toBottomOf="@+id/separate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/separate">
 
-    <TextView
-        android:id="@+id/stores"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:textColor="@color/bottomNavigationSelectedColor"
-        android:layout_marginStart="7dp"
-        android:textSize="24dp"
-        android:text="@string/stores"/>
+        <TextView
+            android:id="@+id/stores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="7dp"
+            android:text="@string/stores"
+            android:textColor="@color/bottomNavigationSelectedColor"
+            android:textSize="24dp" />
 
         <TextView
             android:id="@+id/viewAllStores"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:gravity="right"
-            android:layout_alignParentStart="true"
             android:layout_alignEnd="@+id/stores"
-            android:layout_marginRight="7dp"
-            android:textColor="@color/colorAccent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_marginLeft="7dp"
-            android:textSize="20dp"
+            android:layout_marginRight="7dp"
+            android:gravity="right"
             android:text="@string/see_more"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp"
             tools:ignore="RtlHardcoded" />
 
 
+        <FrameLayout
+            android:id="@+id/storesFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
 
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:id="@+id/storesFrame"
-                android:layout_alignParentTop="true"
-                android:layout_height="wrap_content">
-
-            </FrameLayout>
+        </FrameLayout>
 
     </RelativeLayout>
 
@@ -77,47 +76,45 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        app:layout_constraintTop_toBottomOf="@+id/view_stores"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
+        app:layout_constraintTop_toBottomOf="@+id/view_stores"
         tools:layout_editor_absoluteY="10dp">
 
         <TextView
             android:id="@+id/deals"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="7dp"
+            android:text="@string/favorite_deals"
             android:textColor="@color/bottomNavigationSelectedColor"
-            android:textSize="24dp"
-            android:text="@string/favorite_deals"/>
+            android:textSize="24dp" />
 
         <TextView
             android:id="@+id/viewAllDeals"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:gravity="right"
-            android:layout_alignParentStart="true"
             android:layout_alignEnd="@+id/deals"
-            android:layout_marginRight="7dp"
-            android:textColor="@color/colorAccent"
-
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_marginLeft="7dp"
-            android:textSize="20dp"
-            android:text="@string/see_more"/>
+            android:layout_marginRight="7dp"
+            android:gravity="right"
+
+            android:text="@string/see_more"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp" />
 
         <FrameLayout
-            android:layout_width="wrap_content"
             android:id="@+id/dealsFrame"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
         </FrameLayout>
     </RelativeLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
