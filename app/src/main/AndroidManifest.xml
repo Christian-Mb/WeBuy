@@ -10,10 +10,13 @@
         android:roundIcon="@mipmap/ic_icone_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".PurshaseGroupActivity"></activity>
         <activity
             android:name=".CrispSDKActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AddDeal" />
+        <activity
+            android:name=".AddDeal"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DashbordActivity"
             android:theme="@style/AppTheme.NoActionBar" />
