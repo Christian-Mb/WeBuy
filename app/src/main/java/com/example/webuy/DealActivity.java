@@ -1,19 +1,21 @@
 package com.example.webuy;
 
-import android.graphics.Paint;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class DealActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_deal);
-        TextView promo_before = findViewById(R.id.deal_promo_before);
-        promo_before.setPaintFlags(promo_before.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        setContentView(R.layout.details_deal_fragment);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle(getString(R.string.deal));
+        setSupportActionBar(toolbar);
+        //TextView promo_before = findViewById(R.id.deal_promo_before);
+        // promo_before.setPaintFlags(promo_before.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
 
 
     }

@@ -1,30 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/details_deal_fragment"
     tools:context=".DealActivity">
 
     <RelativeLayout
         android:id="@+id/relative_layout"
         android:layout_width="match_parent"
+
         android:layout_height="match_parent">
 
-        <ImageView
+        <androidx.cardview.widget.CardView
             android:id="@+id/deal_image_detail"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="15dp"
+            android:layout_alignBottom="@+id/deal_link"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
-            android:src="@drawable/logo_auchan"></ImageView>
+            android:elevation="12dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            app:cardCornerRadius="50dp">
+
+            <ImageView
+                android:id="@+id/deal_image_detail_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape"
+                android:src="@drawable/icone"></ImageView>
+
+        </androidx.cardview.widget.CardView>
 
         <View
+            android:id="@+id/viewD"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@id/deal_image_detail"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:background="@android:color/holo_blue_dark">
 
@@ -38,8 +59,9 @@
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@+id/deal_image_detail"
             android:text="TITRE DEAL"
-            android:textColor="@color/blackTextColor"
-            android:textSize="20dp">
+            android:textColor="@color/primaryTextColor"
+            android:textSize="26dp"
+            android:textStyle="bold">
 
         </TextView>
 
@@ -47,69 +69,241 @@
             android:id="@+id/deal_promo_after"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/creator_image"
+            android:layout_below="@id/deal_title_detail"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="5dp"
             android:layout_toRightOf="@id/deal_image_detail"
+
             android:text="5€"
             android:textColor="#ff1100"
-            android:textSize="20dp"></TextView>
+            android:textSize="24dp"></TextView>
 
         <TextView
             android:id="@+id/deal_promo_before"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/deal_creator"
+            android:layout_below="@id/deal_title_detail"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:layout_toRightOf="@id/deal_promo_after"
             android:alpha="0.5"
             android:text="10€"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:textStyle="bold"></TextView>
 
-        <ImageView
-            android:id="@+id/creator_image"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_below="@id/deal_title_detail"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_toRightOf="@id/deal_image_detail"
-            android:src="@drawable/logo_auchan"></ImageView>
 
         <TextView
             android:id="@+id/deal_creator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/deal_title_detail"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="15dp"
-            android:layout_toRightOf="@id/creator_image"
+            android:layout_below="@id/deal_promo_after"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/deal_image_detail"
+            android:textColor="@color/blackTextColor"
+            android:textSize="20dp"
+            android:textStyle="bold"
             android:text="Delal"></TextView>
 
         <TextView
             android:id="@+id/deal_description"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@id/viewD"
+            android:paddingLeft="7dp"
+            android:paddingTop="7dp"
+            android:paddingRight="7dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/deal_image_detail"
+            android:paddingBottom="7dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:text="Description :
 Consolidez votre alimentation électrique - 12 prises AC et 6 ports USB répondent à tous vos besoins d'alimentation
 Technologie de charge adaptative AiPower - Réglée pour fournir le taux de recharge maximum le plus sûr pour tous vos périphériques alimentés par USB, jusqu'à 2,4 A par port (6A maximum au total)
-La conception cylindrique offre plus d'espace et des angles pratiques pour brancher facilement tous vos appareils électroniques et électriques
-Des protections intégrées protègent vos appareils contre les courants excessifs, la surchauffe et la surcharge. Protection contre la foudre, protection contre les surtensions avec une cote énergétique de 3500 W
-Contenu de l'emballage : Multiprise AUKEY PA-S14, câble d'alimentation 2 mètres, manuel d'utilisation, carte de garantie de remplacement du produit de 24 mois ">
+"
+            android:textSize="17dp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/deals_group_purshase"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/deal_description"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_purshase_group"
+            android:tint="@color/colorAccent"></ImageView>
+
+        <TextView
+            android:id="@+id/txt_deals_group_purshase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deal_description"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/participant_image"
+            android:text="@string/current_purshase_group"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/nbr_purshase_group"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/deal_description"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/txt_deals_stock"
+            android:background="@drawable/login_button_bk"
+            android:paddingTop="5dp"
+            android:text="10"
+            android:textAlignment="center"
+            android:textColor="@color/whiteBodyColor">
 
         </TextView>
+
+        <ImageView
+            android:id="@+id/deals_stock"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/deals_group_purshase"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_sale"
+            android:tint="@color/colorAccent"></ImageView>
+
+        <TextView
+            android:id="@+id/txt_deals_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deals_group_purshase"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/participant_image"
+            android:text="@string/quantity_available"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/nbr_stock"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/deals_group_purshase"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/txt_deals_stock"
+            android:background="@drawable/login_button_bk"
+            android:paddingTop="5dp"
+            android:text="26"
+            android:textAlignment="center"
+            android:textColor="@color/whiteBodyColor">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/quantity_to_buy"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/deals_stock"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_shopping_cart"
+            android:tint="@color/colorAccent"></ImageView>
+
+        <TextView
+            android:id="@+id/txt_quantity_to_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deals_stock"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/quantity_to_buy"
+            android:text="@string/quantity_to_buy"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/nbr_available"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/txt_deals_stock"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/txt_deals_stock"
+            android:background="@drawable/login_button_bk"
+            android:paddingTop="5dp"
+            android:text="3"
+            android:textAlignment="center"
+            android:textColor="@color/whiteBodyColor">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/participant_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/quantity_to_buy"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_clock"></ImageView>
+
+        <TextView
+            android:id="@+id/beginAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantity_to_buy"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/participant_image"
+            android:text="@string/begin_at"
+            android:textSize="20dp"></TextView>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/participant_image"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_tags"></ImageView>
+
+        <TextView
+            android:id="@+id/publishedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/beginAt"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/participant_image"
+            android:text="Published at"
+            android:textSize="20dp"></TextView>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/publishedAt"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_pencil"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editedAt"
+            android:layout_below="@id/publishedAt"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/participant_image"
+            android:text="@string/edited_at"
+            android:textSize="20dp"></TextView>
 
         <View
             android:id="@+id/description_underline"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_below="@id/deal_description"
+            android:layout_below="@id/editedAt"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
@@ -117,67 +311,19 @@ Contenu de l'emballage : Multiprise AUKEY PA-S14, câble d'alimentation 2 mètre
 
         </View>
 
-        <TextView
-            android:id="@+id/participant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/description_underline"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:text="Participant : "
-            android:textColor="@color/blackTextColor"
-            android:textSize="20dp">
-
-        </TextView>
-
-        <ImageView
-            android:id="@+id/participant_image"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_below="@id/participant"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/logo_auchan"></ImageView>
-
-        <TextView
-            android:id="@+id/participant_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/participant"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_toRightOf="@id/participant_image"
-            android:text="Delal"
-            android:textSize="30dp"></TextView>
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_below="@id/participant_image"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/logo_auchan"></ImageView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/participant_name"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/participant_image"
-            android:text="Delal"
-            android:textSize="30dp"></TextView>
 
         <Button
             android:id="@+id/BtnParticipate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/participant"
+            android:layout_below="@id/description_underline"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="12dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/login_button_bk"
-            android:text="@string/participate">
+            android:text="@string/create_or_join_a_purshase_groupe">
 
         </Button>
 
@@ -185,12 +331,15 @@ Contenu de l'emballage : Multiprise AUKEY PA-S14, câble d'alimentation 2 mètre
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="10dp"
+            android:layout_below="@id/description_underline"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="7dp"
+            android:layout_toRightOf="@+id/BtnParticipate"
             android:layout_marginBottom="20dp"
             android:src="@drawable/baseline_chat_black_18dp">
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     </RelativeLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>

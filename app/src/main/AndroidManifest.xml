@@ -17,7 +17,9 @@
         <activity
             android:name=".DashbordActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DealActivity" />
+        <activity
+            android:name=".DealActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".OnboardingActivity"
             android:theme="@style/AppTheme.NoActionBar" />

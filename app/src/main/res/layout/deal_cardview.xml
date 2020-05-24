@@ -110,9 +110,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="15dp"
                         android:elevation="12dp"
-
                         android:innerRadius="0dp"
-
                         android:shape="ring"
                         android:thicknessRatio="1.9"
                         app:cardCornerRadius="50dp">
@@ -120,12 +118,12 @@
                         <ImageView
                             android:id="@+id/imageView1"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:tint="@color/darkModeBackground"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"
+                            android:background="@drawable/shape"
                             android:layout_gravity="center_vertical"
-                            android:src="@drawable/ic_user"></ImageView>
+                            android:src="@drawable/icone"></ImageView>
 
                     </androidx.cardview.widget.CardView>
 
