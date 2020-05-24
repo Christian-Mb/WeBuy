@@ -89,6 +89,8 @@ Swipe again to the right to return to the reception. </string>
     <string name="price">Price</string>
     <string name="before_s_price">Before\'s price</string>
     <string name="end_at">End at</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="choose_image">You didn\'t choose an image</string>
 
     <string-array name="magazin">
         <item>Magazin</item>
