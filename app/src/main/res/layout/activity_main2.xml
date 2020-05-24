@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main2Activity">
+    tools:context=".views.account.AccountActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="top"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context=".Main2Activity">
+        tools:context=".views.account.AccountActivity">
 
 
     </androidx.viewpager.widget.ViewPager>

@@ -6,7 +6,7 @@
     style="@style/parent.contentLayout"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
-    tools:context=".Main3Activity">
+    tools:context=".views.home.HomeActivity">
 
     <FrameLayout
         android:id="@+id/content_main3"

@@ -8,12 +8,15 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.webuy.views.account.AccountActivity;
+import com.example.webuy.views.onboarding.OnboardingActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     View.OnClickListener connect = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
+            Intent intent = new Intent(getApplicationContext(), AccountActivity.class);
             startActivity(intent);
         }
     };

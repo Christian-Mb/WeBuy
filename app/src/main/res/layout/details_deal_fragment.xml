@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/profileBackground"
     android:fitsSystemWindows="true"
-    tools:context=".DealActivity">
+    tools:context=".views.deal.DealActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"

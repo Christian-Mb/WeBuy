@@ -7,7 +7,7 @@
     android:background="@color/profileBackground"
     android:fitsSystemWindows="true"
     android:orientation="horizontal"
-    tools:context=".CrispSDKActivity">
+    tools:context=".views.customerSupport.CrispSDKActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -30,7 +30,7 @@
             android:layout_height="match_parent"
 
 
-            tools:context=".CrispSDKActivity">
+            tools:context=".views.customerSupport.CrispSDKActivity">
 
 
         </FrameLayout>
