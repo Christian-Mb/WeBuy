@@ -3,7 +3,7 @@
 
 
     style="@style/loginParent"
-
+    android:background="@color/Background_color"
     android:orientation="vertical">
 
     <ScrollView style="@style/parent">
