@@ -197,4 +197,26 @@
         <item name="android:layout_marginRight">10dp</item>
     </style>
 
+    <style name="livetracker"></style>
+
+    <style name="livetracker.stats" parent="livetracker"></style>
+
+    <style name="stats.container" parent="livetracker.stats">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:minHeight">70dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingBottom">15dp</item>
+    </style>
+
+    <style name="stats.icon" parent="livetracker.stats">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_width">28dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:tint">@color/colorAccent</item>
+        <item name="android:alpha">0.5</item>
+    </style>
+
 </resources>

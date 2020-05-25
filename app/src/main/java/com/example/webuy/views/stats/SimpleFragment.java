@@ -1,4 +1,4 @@
-package com.example.webuy;
+package com.example.webuy.views.stats;
 
 
 import android.content.Context;

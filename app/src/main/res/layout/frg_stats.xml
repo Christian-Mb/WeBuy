@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <FrameLayout
+        android:id="@+id/layDistance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/common_white"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toStartOf="@+id/laySpeed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            style="@style/stats.container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imgDistance"
+                style="@style/stats.icon"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_message" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/laySpeed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#99EEEEEE"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layDistance"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            style="@style/stats.container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imgSpeed"
+                style="@style/stats.icon"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_like" />
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layDuration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewMiddleHorizontal"
+        android:layout_toLeftOf="@+id/viewMiddleVertical"
+        android:background="#99EEEEEE"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toStartOf="@id/layCalories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layDistance">
+
+        <RelativeLayout
+            style="@style/stats.container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgSpeeds"
+                style="@style/stats.icon"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_unlike" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layCalories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFEEEEEE"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layDuration"
+        app:layout_constraintTop_toBottomOf="@+id/layDistance">
+
+        <RelativeLayout
+            style="@style/stats.container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imgCalories"
+                style="@style/stats.icon"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_fuego" />
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/viewMiddleVertical"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#EEEEEE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewMiddleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</merge>

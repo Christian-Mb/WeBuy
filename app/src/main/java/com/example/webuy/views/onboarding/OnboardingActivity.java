@@ -18,8 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.webuy.PrefManager;
 import com.example.webuy.R;
+import com.example.webuy.views.PrefManager;
 import com.example.webuy.views.account.AccountActivity;
 import com.example.webuy.views.home.HomeActivity;
 

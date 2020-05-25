@@ -1,4 +1,4 @@
-package com.example.webuy;
+package com.example.webuy.views.home;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.webuy.R;
 import com.example.webuy.views.account.AccountActivity;
 import com.example.webuy.views.onboarding.OnboardingActivity;
 

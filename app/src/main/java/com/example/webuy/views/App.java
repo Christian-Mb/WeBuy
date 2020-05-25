@@ -1,4 +1,4 @@
-package com.example.webuy;
+package com.example.webuy.views;
 
 import android.app.Application;
 

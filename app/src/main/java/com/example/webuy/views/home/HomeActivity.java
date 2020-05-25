@@ -15,8 +15,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
-import com.example.webuy.DarkModePrefManager;
 import com.example.webuy.R;
+import com.example.webuy.views.DarkModePrefManager;
 import com.example.webuy.views.account.AccountInfoActivity;
 import com.example.webuy.views.account.AccountPasswordActivity;
 import com.example.webuy.views.customerSupport.CrispSDKActivity;
