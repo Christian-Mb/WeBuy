@@ -10,7 +10,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.webuy.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class ListBuyingGroupActivity extends AppCompatActivity {
+public class BuyingGroupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
