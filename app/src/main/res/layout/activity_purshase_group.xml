@@ -175,7 +175,7 @@
                 android:layout_below="@id/viewD3"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
-                android:src="@drawable/ic_description"
+                android:src="@drawable/ic_user"
                 android:tint="@color/colorAccent"></ImageView>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -191,8 +191,8 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/description"
-                    android:inputType="textMultiLine"
+                    android:hint="@string/participants_s_number"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:textColor="@color/blackTextColor"
                     android:textColorHint="#AA777777"

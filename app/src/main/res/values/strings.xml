@@ -102,6 +102,7 @@ Swipe again to the right to return to the reception. </string>
     <string name="admin_profile">Admin profile</string>
     <string name="admin_quantity">Admin quantity</string>
     <string name="create_buying_group">Create buying group</string>
+    <string name="participants_s_number">Participants\'s number</string>
 
     <string-array name="magazin">
         <item>Magazin</item>
