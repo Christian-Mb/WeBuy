@@ -22,7 +22,7 @@ import com.example.webuy.R;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-public class AddDeal extends AppCompatActivity {
+public class AddDealActivity extends AppCompatActivity {
     static final int RESULT_LOAD_IMG = 1;
     LinearLayout linearLayout;
     ImageView imageView;

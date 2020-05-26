@@ -7,7 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.webuy.R;
 
-public class DealActivity extends AppCompatActivity {
+public class DealDetailsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

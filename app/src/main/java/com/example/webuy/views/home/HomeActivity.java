@@ -20,7 +20,7 @@ import com.example.webuy.views.DarkModePrefManager;
 import com.example.webuy.views.account.AccountInfoActivity;
 import com.example.webuy.views.account.AccountPasswordActivity;
 import com.example.webuy.views.customerSupport.CrispSDKActivity;
-import com.example.webuy.views.deal.AddDeal;
+import com.example.webuy.views.deal.AddDealActivity;
 import com.example.webuy.views.deal.DealFragment;
 import com.example.webuy.views.stats.DashbordActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -99,7 +99,7 @@ public class HomeActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), AddDeal.class);
+                Intent intent = new Intent(getApplicationContext(), AddDealActivity.class);
                 startActivity(intent);
             }
         });

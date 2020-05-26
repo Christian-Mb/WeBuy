@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.webuy.R;
 
-public class PurshaseGroupActivity extends AppCompatActivity {
+public class CreatePurshaseGroupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

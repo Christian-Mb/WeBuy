@@ -38,7 +38,7 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
         viewHolder.item_deal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, DealActivity.class));
+                context.startActivity(new Intent(context, DealDetailsActivity.class));
             }
         });
         return new DealListAdapter.MyViewHolder(view);
