@@ -24,9 +24,9 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:background="@color/Background_color"
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
+        android:background="@color/Background_color"
 
         app:layout_constraintTop_toBottomOf="@+id/app_bar">
 

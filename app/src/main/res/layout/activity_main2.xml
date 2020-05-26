@@ -22,9 +22,9 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:background="@color/Background_color"
         android:layout_height="match_parent"
         android:layout_gravity="top"
+        android:background="@color/Background_color"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context=".views.account.AccountActivity">
 
