@@ -36,5 +36,6 @@
 
     <color name="darkModeBackground">#353567</color>
     <color name="darkModeTextColor">#fff</color>
+    <color name="color_comment">#FFEEEE</color>
 
 </resources>

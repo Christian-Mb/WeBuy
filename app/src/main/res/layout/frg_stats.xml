@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/shape"
     android:layout_height="wrap_content"
+    android:background="@drawable/shape"
 
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
@@ -12,7 +13,7 @@
         android:id="@+id/layDistance"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#fffff"
+        android:background="@drawable/shape"
         android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintEnd_toStartOf="@+id/laySpeed"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,6 +23,42 @@
             style="@style/stats.container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nbrComment"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@id/imgDistance"
+                android:text="200"
+                android:textColor="@color/bottomNavigationSelectedColor"
+                android:textSize="16dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/nbrComment"
+                android:text="@string/comments"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="14dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/comment"
+                android:layout_alignEnd="@id/comment"
+                android:gravity="right"
+                android:text="@string/got_on_deals"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="12dp">
+
+            </TextView>
 
 
             <ImageView
@@ -37,7 +74,7 @@
         android:id="@+id/laySpeed"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#99EEEEEE"
+        android:background="@drawable/shape"
         android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/layDistance"
@@ -47,6 +84,42 @@
             style="@style/stats.container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nbrLike"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@id/imgSpeed"
+                android:text="200"
+                android:textColor="@color/bottomNavigationSelectedColor"
+                android:textSize="16dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/nbrLike"
+                android:text="@string/kind_likes"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="14dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/like"
+                android:layout_alignEnd="@id/like"
+                android:gravity="right"
+                android:text="@string/got_on_deals"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="12dp">
+
+            </TextView>
 
 
             <ImageView
@@ -66,7 +139,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/viewMiddleHorizontal"
         android:layout_toLeftOf="@+id/viewMiddleVertical"
-        android:background="#99EEEEEE"
+        android:background="@drawable/shape"
         android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintEnd_toStartOf="@id/layCalories"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,6 +149,43 @@
             style="@style/stats.container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nbrUnLike"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="5dp"
+                android:layout_toEndOf="@id/imgSpeeds"
+                android:text="200"
+                android:textColor="@color/bottomNavigationSelectedColor"
+                android:textSize="16dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/unlike"
+                android:layout_width="97dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/nbrUnLike"
+                android:text="@string/cazy_unlikes"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="14dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/unlike"
+                android:layout_alignEnd="@id/unlike"
+                android:gravity="right"
+                android:text="@string/got_on_deals"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="12dp">
+
+            </TextView>
+
 
             <ImageView
                 android:id="@+id/imgSpeeds"
@@ -87,11 +197,12 @@
         </RelativeLayout>
     </FrameLayout>
 
+
     <FrameLayout
         android:id="@+id/layCalories"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#FFEEEEE"
+        android:background="@drawable/shape"
         android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/layDuration"
@@ -102,17 +213,54 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/nbrDeals"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="5dp"
+                android:layout_toEndOf="@id/imgCalories"
+                android:text="200"
+                android:textColor="@color/bottomNavigationSelectedColor"
+                android:textSize="16dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/deals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/nbrDeals"
+                android:text="@string/deals_added"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="14dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/deals"
+                android:layout_alignEnd="@id/deals"
+                android:gravity="right"
+                android:text="@string/on_webuy"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="12dp">
+
+            </TextView>
+
 
             <ImageView
                 android:id="@+id/imgCalories"
                 style="@style/stats.icon"
                 android:layout_centerVertical="true"
                 android:tint="@color/darkModeBackground"
-                app:srcCompat="@drawable/ic_fuego" />
+                app:srcCompat="@drawable/ic_add" />
 
 
         </RelativeLayout>
     </FrameLayout>
+
 
     <View
         android:id="@+id/viewMiddleVertical"
@@ -129,10 +277,148 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#EEEEEE"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/layDistance"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/layDistance" />
+
+    <View
+        android:id="@+id/viewMiddleHorizontal2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        app:layout_constraintBottom_toBottomOf="@id/layDuration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/layDuration" />
+
+    <FrameLayout
+        android:id="@+id/layStore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewMiddleHorizontal2"
+        android:layout_marginRight="2dp"
+        android:layout_toLeftOf="@+id/viewMiddleVertical"
+        android:background="@drawable/shape"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toStartOf="@id/layParticipation"
+        app:layout_constraintRight_toLeftOf="@id/viewMiddleVertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/layDuration">
+
+        <RelativeLayout
+            style="@style/stats.container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nbrPurshase"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@id/imgShopping"
+                android:text="200"
+                android:textColor="@color/bottomNavigationSelectedColor"
+                android:textSize="16dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/purshase"
+                android:layout_width="97dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/nbrPurshase"
+                android:text="@string/purshases"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="14dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/purshase"
+                android:layout_alignEnd="@id/purshase"
+                android:gravity="right"
+                android:text="@string/on_webuy"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="12dp">
+
+            </TextView>
 
 
-</merge>
+            <ImageView
+                android:id="@+id/imgShopping"
+                style="@style/stats.icon"
+                android:layout_centerVertical="true"
+                android:tint="@color/darkModeBackground"
+                app:srcCompat="@drawable/ic_shopping_cart" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layParticipation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layStore"
+        app:layout_constraintTop_toBottomOf="@+id/viewMiddleHorizontal2">
+
+        <RelativeLayout
+            style="@style/stats.container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nbrParticipation"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="5dp"
+                android:layout_toEndOf="@id/imgP"
+                android:text="200"
+                android:textColor="@color/bottomNavigationSelectedColor"
+                android:textSize="16dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/participation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/nbrParticipation"
+                android:text="@string/interactions"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="14dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/participation"
+                android:layout_alignEnd="@id/participation"
+                android:gravity="right"
+                android:text="@string/on_webuy"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="12dp">
+
+            </TextView>
+
+
+            <ImageView
+                android:id="@+id/imgP"
+                style="@style/stats.icon"
+                android:layout_centerVertical="true"
+                android:tint="@color/darkModeBackground"
+                app:srcCompat="@drawable/ic_fuego" />
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

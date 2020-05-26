@@ -75,15 +75,6 @@
                         style="@style/profileStyledBackButton"
                         android:text="@string/back_to_home" />
 
-                    <include layout="@layout/card_stat"></include>
-
-                    <include layout="@layout/card_stat2"></include>
-
-                    <include layout="@layout/card_stat3"></include>
-
-                    <include layout="@layout/card_stat4"></include>
-
-                    <include layout="@layout/card_stat5"></include>
                 </RelativeLayout>
 
 
