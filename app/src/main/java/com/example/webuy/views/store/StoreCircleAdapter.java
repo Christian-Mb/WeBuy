@@ -13,17 +13,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.webuy.R;
+import com.example.webuy.core.store.Store;
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 
 public class StoreCircleAdapter extends RecyclerView.Adapter<StoreCircleAdapter.MyViewHolder> {
 
 
-    int[] logo;
+    ArrayList<Store> stores;
     Context context;
 
 
-    public StoreCircleAdapter(Context ct, int[] logo) {
-        this.context = ct;
-        this.logo = logo;
+    public StoreCircleAdapter(Context context, ArrayList<Store> stores) {
+        this.context = context;
+        this.stores = stores;
     }
 
     @NonNull
@@ -38,6 +42,7 @@ public class StoreCircleAdapter extends RecyclerView.Adapter<StoreCircleAdapter.
             public void onClick(View v) {
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
                 StoreFragment storeFragment = new StoreFragment();
+                storeFragment.setStores(stores);
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, storeFragment).addToBackStack(null).commit();
             }
 
@@ -47,12 +52,12 @@ public class StoreCircleAdapter extends RecyclerView.Adapter<StoreCircleAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull StoreCircleAdapter.MyViewHolder holder, int position) {
-        holder.logo.setImageResource(logo[position]);
+        Picasso.get().load(stores.get(position).getLogo()).into(holder.logo);
     }
 
     @Override
     public int getItemCount() {
-        return logo.length;
+        return stores.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

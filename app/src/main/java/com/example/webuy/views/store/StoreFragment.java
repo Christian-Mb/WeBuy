@@ -12,19 +12,24 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.webuy.R;
+import com.example.webuy.core.store.Store;
+
+import java.util.ArrayList;
 
 public class StoreFragment extends Fragment {
 
     private View v;
     private RecyclerView recyclerView;
-    private String[] mTitle = {"Auchan", "Leclerc", "Carrefour", "Super U"};
-    private String[] mQuantiteDeals = {"12", "50", "25", "34"};
-    private String[] mQuantiteStores = {"34", "12", "45", "21"};
 
-    private int[] logo = {R.drawable.logo_auchan, R.drawable.logo_leclerc, R.drawable.logo_carrefour, R.drawable.logo_u};
+
+    private ArrayList<Store> stores;
 
     public StoreFragment() {
 
+    }
+
+    public void setStores(ArrayList<Store> stores) {
+        this.stores = stores;
     }
 
     @Nullable
@@ -34,7 +39,7 @@ public class StoreFragment extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.magazinRecyclerView);
 
-        StoreAdapter storeAdapter = new StoreAdapter(getContext(), mTitle, mQuantiteDeals, mQuantiteStores, logo);
+        StoreAdapter storeAdapter = new StoreAdapter(getContext(), stores);
         recyclerView.setAdapter(storeAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);

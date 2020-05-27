@@ -10,9 +10,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Store extends BaseWebuy {
+public class Store extends BaseWebuy implements Serializable {
 
 
     // Juste nom de la classe afin de l'afficher pendant le log.
@@ -143,4 +144,14 @@ public class Store extends BaseWebuy {
     }
 
 
+    @Override
+    public String toString() {
+        return "Store{" +
+                "nom='" + nom + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", logo='" + logo + '\'' +
+                '}';
+    }
 }

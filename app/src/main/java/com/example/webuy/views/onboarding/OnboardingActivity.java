@@ -19,6 +19,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.webuy.R;
+import com.example.webuy.core.utils.Logs;
 import com.example.webuy.views.PrefManager;
 import com.example.webuy.views.account.AccountActivity;
 import com.example.webuy.views.home.HomeActivity;
@@ -90,6 +91,8 @@ public class OnboardingActivity extends AppCompatActivity {
         dotsLayout = findViewById(R.id.layoutDots);
         btnSkip = findViewById(R.id.btn_skip);
         loginBtn = findViewById(R.id.loginBtn);
+        Intent save = getIntent();
+        Logs.info(this, save.getSerializableExtra("store").toString());
 
 
         // layouts of all welcome sliders
@@ -113,6 +116,10 @@ public class OnboardingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+
+                Intent save = getIntent();
+                Logs.info(this, save.getSerializableExtra("store").toString());
+                intent.putExtra("store", save.getSerializableExtra("store"));
                 startActivity(intent);
             }
         });
@@ -122,6 +129,9 @@ public class OnboardingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), AccountActivity.class);
+                Intent save = getIntent();
+
+                intent.putExtra("store", save.getSerializableExtra("store"));
                 startActivity(intent);
             }
         });

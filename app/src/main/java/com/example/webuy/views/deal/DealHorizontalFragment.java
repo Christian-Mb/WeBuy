@@ -21,6 +21,7 @@ public class DealHorizontalFragment extends Fragment {
     String[] dDescription = {"Une description", "Une description", "Une description", "Une description", "Une description", "Une description", "Une description"};
     int[] dCodePostal = {37, 95, 44, 45, 12, 78, 14};
 
+
     public DealHorizontalFragment() {
 
     }

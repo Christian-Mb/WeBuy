@@ -14,17 +14,27 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.webuy.R;
+import com.example.webuy.core.store.Store;
+import com.example.webuy.core.utils.Logs;
 import com.example.webuy.views.deal.DealFragment;
 import com.example.webuy.views.deal.DealHorizontalFragment;
 import com.example.webuy.views.store.StoreCircleFragment;
 import com.example.webuy.views.store.StoreFragment;
 
+import java.util.ArrayList;
+
 
 public class HomeFragment extends Fragment {
     private TextView seeMoreStores, seeMoreDeals;
+    private ArrayList<Store> stores;
 
     public HomeFragment() {
         // Required empty public constructor
+        stores = new ArrayList<>();
+    }
+
+    public void setStores(ArrayList<Store> stores) {
+        this.stores = stores;
     }
 
 
@@ -55,7 +65,10 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 AppCompatActivity activity = (AppCompatActivity) getView().getContext();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new StoreFragment()).addToBackStack(null).commit();
+                StoreFragment storeFragment = new StoreFragment();
+                Logs.info(this, "size stores : " + stores.size());
+                storeFragment.setStores(stores);
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, storeFragment).addToBackStack(null).commit();
 
             }
         });
@@ -67,7 +80,8 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Fragment fragment = new StoreCircleFragment();
+        StoreCircleFragment fragment = new StoreCircleFragment();
+        fragment.setStores(stores);
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.replace(R.id.storesFrame, fragment).commit();
 

@@ -1,5 +1,6 @@
 package com.example.webuy.views.home;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -16,6 +17,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.example.webuy.R;
+import com.example.webuy.core.store.Store;
+import com.example.webuy.core.utils.Logs;
 import com.example.webuy.views.DarkModePrefManager;
 import com.example.webuy.views.account.AccountInfoActivity;
 import com.example.webuy.views.account.AccountPasswordActivity;
@@ -27,12 +30,16 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationView bottomNavigationView;
+    private ArrayList<Store> stores;
 
 
+    private ProgressDialog pDialog;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -50,8 +57,9 @@ public class HomeActivity extends AppCompatActivity
 
                     break;
                 case R.id.navigationHome:
-                    fragment = new HomeFragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+                    HomeFragment homeFragment = new HomeFragment();
+                    homeFragment.setStores(stores);
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, homeFragment).commit();
 
                     break;
                 case R.id.navigationSearch:
@@ -66,6 +74,11 @@ public class HomeActivity extends AppCompatActivity
         }
     };
 
+
+    public HomeActivity() {
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +86,9 @@ public class HomeActivity extends AppCompatActivity
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
         setContentView(R.layout.activity_main3);
+        Intent intent = getIntent();
+        stores = (ArrayList<Store>) intent.getSerializableExtra("store");
+        Logs.info(this, "size " + stores.size());
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -86,6 +102,7 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
 
         bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -103,6 +120,7 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
 
     }
 
@@ -155,4 +173,6 @@ public class HomeActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

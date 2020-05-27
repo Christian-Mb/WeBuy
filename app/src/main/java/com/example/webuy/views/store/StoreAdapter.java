@@ -14,21 +14,23 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.webuy.R;
+import com.example.webuy.core.store.Store;
 import com.example.webuy.views.deal.DealFragment;
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 
 public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.MyViewHolder> {
 
-    String[] titre, dealsNumber, storesNumber;
-    int[] logo;
+    ArrayList<Store> stores;
     Context context;
 
 
-    public StoreAdapter(Context ct, String[] titre, String[] dealsNumber, String[] storesNumber, int[] logo) {
-        this.context = ct;
-        this.titre = titre;
-        this.dealsNumber = dealsNumber;
-        this.storesNumber = storesNumber;
-        this.logo = logo;
+    public StoreAdapter(Context context, ArrayList<Store> stores) {
+        this.context = context;
+        this.stores = stores;
+
+
     }
 
     @NonNull
@@ -53,15 +55,17 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.MyViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull StoreAdapter.MyViewHolder holder, int position) {
-        holder.title.setText(titre[position]);
-        holder.dealsNumber.setText(dealsNumber[position]);
-        holder.storesNumber.setText(storesNumber[position]);
-        holder.logo.setImageResource(logo[position]);
+        holder.title.setText(stores.get(position).getNom());
+        int nbrs = (int) Math.random() * 100;
+        holder.dealsNumber.setText("" + nbrs);
+        holder.storesNumber.setText("" + nbrs);
+        Picasso.get().load(stores.get(position).getLogo()).into(holder.logo);
+
     }
 
     @Override
     public int getItemCount() {
-        return titre.length;
+        return stores.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

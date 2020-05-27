@@ -132,4 +132,5 @@ Swipe again to the right to return to the reception. </string>
     <string name="title_activity_friends">FriendsActivity</string>
     <string name="internt_is_not_available">Internet is not avaible</string>
     <string name="common_thanks">Thank you</string>
+    <string name="ready">Ready</string>
 </resources>

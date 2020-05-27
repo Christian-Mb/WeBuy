@@ -12,15 +12,21 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.webuy.R;
+import com.example.webuy.core.store.Store;
+
+import java.util.ArrayList;
 
 public class StoreCircleFragment extends Fragment {
 
+    ArrayList<Store> stores;
     private View v;
 
-    private int[] logo = {R.drawable.logo_auchan, R.drawable.logo_leclerc, R.drawable.logo_carrefour, R.drawable.logo_u};
-
     public StoreCircleFragment() {
+        stores = new ArrayList<>();
+    }
 
+    public void setStores(ArrayList<Store> stores) {
+        this.stores = stores;
     }
 
     @Nullable
@@ -30,7 +36,8 @@ public class StoreCircleFragment extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.magazinRecyclerView);
 
-        StoreCircleAdapter storeCircleAdapter = new StoreCircleAdapter(getContext(), logo);
+
+        StoreCircleAdapter storeCircleAdapter = new StoreCircleAdapter(getContext(), stores);
         recyclerView.setAdapter(storeCircleAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         return view;
