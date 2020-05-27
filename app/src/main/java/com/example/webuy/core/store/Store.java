@@ -17,7 +17,8 @@ public class Store extends BaseWebuy {
 
     // Juste nom de la classe afin de l'afficher pendant le log.
     private static String TAG = StoreFragment.class.getSimpleName();
-    private static String api_url = BaseWeBuy.api_url + "/magasins";
+    private static BaseWebuy BaseWeBuy;
+    private static String api_url = BaseWebuy.api_url + "/magasins";
     private String nom;
     private String adresse;
     private double latitude;
