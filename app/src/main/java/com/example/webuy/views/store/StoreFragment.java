@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.webuy.R;
+import com.example.webuy.core.deal.Deal;
 import com.example.webuy.core.store.Store;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class StoreFragment extends Fragment {
 
 
     private ArrayList<Store> stores;
+    private ArrayList<Deal> deals;
 
     public StoreFragment() {
 
@@ -32,6 +34,12 @@ public class StoreFragment extends Fragment {
         this.stores = stores;
     }
 
+    public void setDeals(ArrayList<Deal> deals) {
+        this.deals = deals;
+    }
+
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -39,7 +47,7 @@ public class StoreFragment extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.magazinRecyclerView);
 
-        StoreAdapter storeAdapter = new StoreAdapter(getContext(), stores);
+        StoreAdapter storeAdapter = new StoreAdapter(getContext(), stores, deals);
         recyclerView.setAdapter(storeAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);

@@ -17,6 +17,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.example.webuy.R;
+import com.example.webuy.core.deal.Deal;
 import com.example.webuy.core.store.Store;
 import com.example.webuy.core.utils.Logs;
 import com.example.webuy.views.DarkModePrefManager;
@@ -37,6 +38,7 @@ public class HomeActivity extends AppCompatActivity
 
     private BottomNavigationView bottomNavigationView;
     private ArrayList<Store> stores;
+    private ArrayList<Deal> deals;
 
 
     private ProgressDialog pDialog;
@@ -59,6 +61,7 @@ public class HomeActivity extends AppCompatActivity
                 case R.id.navigationHome:
                     HomeFragment homeFragment = new HomeFragment();
                     homeFragment.setStores(stores);
+                    homeFragment.setDeals(deals);
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, homeFragment).commit();
 
                     break;
@@ -88,6 +91,7 @@ public class HomeActivity extends AppCompatActivity
         setContentView(R.layout.activity_main3);
         Intent intent = getIntent();
         stores = (ArrayList<Store>) intent.getSerializableExtra("store");
+        deals = (ArrayList<Deal>) intent.getSerializableExtra("deal");
         Logs.info(this, "size " + stores.size());
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

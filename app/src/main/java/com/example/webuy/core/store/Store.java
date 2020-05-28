@@ -2,6 +2,7 @@ package com.example.webuy.core.store;
 
 import android.util.Log;
 
+import com.example.webuy.core.storeAddress.StoreAddress;
 import com.example.webuy.core.utils.BaseWebuy;
 import com.example.webuy.core.utils.HttpHandler;
 import com.example.webuy.views.store.StoreFragment;
@@ -24,6 +25,7 @@ public class Store extends BaseWebuy implements Serializable {
     private String adresse;
     private double latitude;
     private double longitude;
+    private StoreAddress storeAddress;
 
     // liste des promos d'un magasin, à récupérer aussi via le service Web
     //   private ArrayList<Promotion> promotions;
@@ -35,7 +37,7 @@ public class Store extends BaseWebuy implements Serializable {
      * @return
      */
 
-    public static ArrayList<Store> getAllMagasins() {
+    public static ArrayList<Store> getAllStores() {
 
         // bloquer la requête pendant 2 seconds: juste pour illustrer l'effet des requêtes lourdes
         // sur l'interface graphique si on n'utilise pas les Threads ou AsyncTask
@@ -143,6 +145,13 @@ public class Store extends BaseWebuy implements Serializable {
         this.logo = logo;
     }
 
+    public StoreAddress getStoreAddress() {
+        return storeAddress;
+    }
+
+    public void setStoreAddress(StoreAddress storeAddress) {
+        this.storeAddress = storeAddress;
+    }
 
     @Override
     public String toString() {

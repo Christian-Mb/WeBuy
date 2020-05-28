@@ -1,9 +1,11 @@
 package com.example.webuy.views.deal;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -20,8 +22,8 @@ public class DealDetailsActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(getString(R.string.deal));
         setSupportActionBar(toolbar);
-        //TextView promo_before = findViewById(R.id.deal_promo_before);
-        // promo_before.setPaintFlags(promo_before.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        TextView promo_before = findViewById(R.id.deal_promo_before);
+        promo_before.setPaintFlags(promo_before.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
 
         Button btnParticipate = findViewById(R.id.BtnParticipate);
         btnParticipate.setOnClickListener(new View.OnClickListener() {

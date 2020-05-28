@@ -12,14 +12,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.webuy.R;
+import com.example.webuy.core.deal.Deal;
+
+import java.util.ArrayList;
 
 public class DealFragment extends Fragment {
 
-    View v;
-    RecyclerView recyclerView;
-    String[] dTitle = {"Lait ", "Cristalline", "PS4", "M&M'S", "Machin", "Et", "Bidule"};
-    String[] dDescription = {"Une description", "Une description", "Une description", "Une description", "Une description", "Une description", "Une description"};
-    int[] dCodePostal = {37, 95, 44, 45, 12, 78, 14};
+    private ArrayList<Deal> deals;
+
+    public void setDeals(ArrayList<Deal> deals) {
+        this.deals = deals;
+    }
 
     public DealFragment() {
 
@@ -32,7 +35,7 @@ public class DealFragment extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.magazinRecyclerView);
 
-        DealListAdapter dealAdapter = new DealListAdapter(getContext(), dTitle, dDescription, dCodePostal);
+        DealListAdapter dealAdapter = new DealListAdapter(getContext(), deals);
         recyclerView.setAdapter(dealAdapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);

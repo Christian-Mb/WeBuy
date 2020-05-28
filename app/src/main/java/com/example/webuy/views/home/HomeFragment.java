@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.webuy.R;
+import com.example.webuy.core.deal.Deal;
 import com.example.webuy.core.store.Store;
 import com.example.webuy.core.utils.Logs;
 import com.example.webuy.views.deal.DealFragment;
@@ -27,16 +28,21 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
     private TextView seeMoreStores, seeMoreDeals;
     private ArrayList<Store> stores;
+    ArrayList<Deal> deals;
 
     public HomeFragment() {
         // Required empty public constructor
         stores = new ArrayList<>();
+        deals = new ArrayList<>();
     }
 
     public void setStores(ArrayList<Store> stores) {
         this.stores = stores;
     }
 
+    public void setDeals(ArrayList<Deal> deals) {
+        this.deals = deals;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -68,6 +74,7 @@ public class HomeFragment extends Fragment {
                 StoreFragment storeFragment = new StoreFragment();
                 Logs.info(this, "size stores : " + stores.size());
                 storeFragment.setStores(stores);
+                storeFragment.setDeals(deals);
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, storeFragment).addToBackStack(null).commit();
 
             }
@@ -85,7 +92,8 @@ public class HomeFragment extends Fragment {
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.replace(R.id.storesFrame, fragment).commit();
 
-        Fragment fragment1 = new DealHorizontalFragment();
+        DealHorizontalFragment fragment1 = new DealHorizontalFragment();
+        fragment1.setDeals(deals);
         FragmentTransaction transaction1 = getChildFragmentManager().beginTransaction();
         transaction1.replace(R.id.dealsFrame, fragment1).commit();
 

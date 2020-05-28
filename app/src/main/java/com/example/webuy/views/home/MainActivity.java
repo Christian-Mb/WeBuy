@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.webuy.R;
+import com.example.webuy.core.deal.Deal;
 import com.example.webuy.core.store.Store;
 import com.example.webuy.core.utils.Toasts;
 import com.example.webuy.views.account.AccountActivity;
@@ -20,6 +21,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ArrayList<Store> stores;
+    private ArrayList<Deal> deals;
+
     View.OnClickListener connect = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -27,12 +31,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     };
-    private ArrayList<Store> stores;
+
     View.OnClickListener deal = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getApplicationContext(), OnboardingActivity.class);
             intent.putExtra("store", stores);
+            intent.putExtra("deal", deals);
             startActivity(intent);
         }
     };
@@ -54,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        GetAllMagasinsTask task = new GetAllMagasinsTask(MainActivity.this);
+        GetAllMagasinsDealsTask task = new GetAllMagasinsDealsTask(MainActivity.this);
         task.execute();
     }
 
@@ -62,11 +67,11 @@ public class MainActivity extends AppCompatActivity {
     /**
      * une tâche asynchrone pour obtenir des données json par des requêtes HTTP
      */
-    private class GetAllMagasinsTask extends AsyncTask<Void, Void, Void> {
+    private class GetAllMagasinsDealsTask extends AsyncTask<Void, Void, Void> {
 
         MainActivity a;
 
-        public GetAllMagasinsTask(MainActivity a) {
+        public GetAllMagasinsDealsTask(MainActivity a) {
             this.a = a;
 
         }
@@ -84,7 +89,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... params) {
 
-            stores = Store.getAllMagasins();
+            stores = Store.getAllStores();
+            deals = Deal.getAllDeals();
 
 
             return null;

@@ -120,6 +120,7 @@ public class OnboardingActivity extends AppCompatActivity {
                 Intent save = getIntent();
                 Logs.info(this, save.getSerializableExtra("store").toString());
                 intent.putExtra("store", save.getSerializableExtra("store"));
+                intent.putExtra("deal", save.getSerializableExtra("deal"));
                 startActivity(intent);
             }
         });
@@ -132,6 +133,7 @@ public class OnboardingActivity extends AppCompatActivity {
                 Intent save = getIntent();
 
                 intent.putExtra("store", save.getSerializableExtra("store"));
+                intent.putExtra("deal", save.getSerializableExtra("deal"));
                 startActivity(intent);
             }
         });

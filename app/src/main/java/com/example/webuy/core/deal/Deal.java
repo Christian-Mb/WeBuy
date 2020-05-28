@@ -11,7 +11,10 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 
+
 public class Deal extends BaseWebuy implements Serializable {
+
+
     private double price_before_promo;
     private double price_promo;
     private int quantity_min_to_Buy, quantity_available;
@@ -22,6 +25,14 @@ public class Deal extends BaseWebuy implements Serializable {
     private Timestamp createdAt, startedAt, endedAt;
     private User user;
     private ArrayList<Comment> comments;
+
+    public static ArrayList<Deal> getAllDeals() {
+        //API TODO
+
+        return new ArrayList<Deal>();
+    }
+
+
 
     public double getPrice_before_promo() {
         return price_before_promo;

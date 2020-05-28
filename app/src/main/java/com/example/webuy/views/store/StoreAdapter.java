@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.webuy.R;
+import com.example.webuy.core.deal.Deal;
 import com.example.webuy.core.store.Store;
 import com.example.webuy.views.deal.DealFragment;
 import com.squareup.picasso.Picasso;
@@ -24,11 +25,13 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.MyViewHolder
 
     ArrayList<Store> stores;
     Context context;
+    ArrayList<Deal> deals;
 
 
-    public StoreAdapter(Context context, ArrayList<Store> stores) {
+    public StoreAdapter(Context context, ArrayList<Store> stores, ArrayList<Deal> deals) {
         this.context = context;
         this.stores = stores;
+        this.deals = deals;
 
 
     }
