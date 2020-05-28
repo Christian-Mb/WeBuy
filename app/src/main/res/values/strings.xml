@@ -133,4 +133,7 @@ Swipe again to the right to return to the reception. </string>
     <string name="internt_is_not_available">Internet is not avaible</string>
     <string name="common_thanks">Thank you</string>
     <string name="ready">Ready</string>
+    <string name="person_left">Person left</string>
+    <string name="join_us">Join us</string>
+    <string name="admin">Admin</string>
 </resources>
