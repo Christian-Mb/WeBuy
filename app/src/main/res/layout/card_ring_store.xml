@@ -10,7 +10,7 @@
     android:gravity="center_horizontal"
     android:paddingHorizontal="10dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".views.home.HomeActivity">
+    tools:context="univ.tours.webuy.views.home.HomeActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/view2"

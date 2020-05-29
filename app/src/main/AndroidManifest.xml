@@ -3,7 +3,7 @@
     package="com.example.webuy">
 
     <application
-        android:name=".views.App"
+        android:name="univ.tours.webuy.views.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_icone"
         android:label="@string/app_name"
@@ -11,36 +11,36 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".views.friends.FriendsActivity"
+            android:name="univ.tours.webuy.views.friends.FriendsActivity"
             android:label="@string/title_activity_friends"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".views.purshaseGroup.BuyingGroupActivity"
+            android:name="univ.tours.webuy.views.purshaseGroup.BuyingGroupActivity"
             android:label="@string/title_activity_list_buying_group"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".views.purshaseGroup.CreatePurshaseGroupActivity" />
+        <activity android:name="univ.tours.webuy.views.purshaseGroup.CreatePurshaseGroupActivity" />
         <activity
-            android:name=".views.customerSupport.CrispSDKActivity"
+            android:name="univ.tours.webuy.views.customerSupport.CrispSDKActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".views.deal.AddDealActivity"
+            android:name="univ.tours.webuy.views.deal.AddDealActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".views.stats.DashbordActivity"
+            android:name="univ.tours.webuy.views.stats.DashbordActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".views.deal.DealDetailsActivity"
+            android:name="univ.tours.webuy.views.deal.DealDetailsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".views.onboarding.OnboardingActivity"
+            android:name="univ.tours.webuy.views.onboarding.OnboardingActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".views.account.AccountPasswordActivity"
+            android:name="univ.tours.webuy.views.account.AccountPasswordActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".views.account.AccountInfoActivity"
+            android:name="univ.tours.webuy.views.account.AccountInfoActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".views.home.MainActivity">
+        <activity android:name="univ.tours.webuy.views.home.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,11 +48,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".views.account.AccountActivity"
+            android:name="univ.tours.webuy.views.account.AccountActivity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".views.home.HomeActivity"
+            android:name="univ.tours.webuy.views.home.HomeActivity"
             android:label="Main3Activity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

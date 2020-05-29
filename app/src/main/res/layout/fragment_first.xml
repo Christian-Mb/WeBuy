@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.purshaseGroup.ListGroupFragment">
+    tools:context="univ.tours.webuy.views.purshaseGroup.ListGroupFragment">
 
     <FrameLayout
         android:id="@+id/listGroup"

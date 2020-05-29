@@ -6,7 +6,7 @@
     style="@style/parent.contentLayout"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
-    tools:context=".views.home.HomeActivity">
+    tools:context="univ.tours.webuy.views.home.HomeActivity">
 
     <FrameLayout
         android:id="@+id/content_main3"
