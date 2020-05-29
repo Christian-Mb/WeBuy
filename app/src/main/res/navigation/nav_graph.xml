@@ -9,7 +9,7 @@
         android:id="@+id/FirstFragment"
         android:name="univ.tours.webuy.views.purshaseGroup.ListGroupFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/magazin_fragment">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
@@ -19,7 +19,7 @@
         android:id="@+id/SecondFragment"
         android:name="univ.tours.webuy.views.purshaseGroup.DetailsGroupFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/magazin_fragment">
+        tools:layout="@layout/fragment_second">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
