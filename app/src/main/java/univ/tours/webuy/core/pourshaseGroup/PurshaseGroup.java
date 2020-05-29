@@ -17,6 +17,7 @@ public class PurshaseGroup extends BaseWebuy implements Serializable {
     private Timestamp createdAt;
     private String invitationCode;
     private ArrayList<Comment> comments;
+    private ArrayList<User> participants;
     private ArrayList<ParticipateToPurshaseUser> participateToPurshaseUsers;
 
     public Deal getDeal() {
@@ -89,6 +90,14 @@ public class PurshaseGroup extends BaseWebuy implements Serializable {
 
     public void setParticipateToPurshaseUsers(ArrayList<ParticipateToPurshaseUser> participateToPurshaseUsers) {
         this.participateToPurshaseUsers = participateToPurshaseUsers;
+    }
+
+    public ArrayList<User> getParticipants() {
+        return participants;
+    }
+
+    public void setParticipants(ArrayList<User> participants) {
+        this.participants = participants;
     }
 
     @Override

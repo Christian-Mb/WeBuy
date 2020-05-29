@@ -1,7 +1,6 @@
 package univ.tours.webuy.views.purshaseGroup;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.webuy.R;
@@ -17,17 +17,21 @@ import com.example.webuy.R;
 import java.util.ArrayList;
 
 import univ.tours.webuy.core.pourshaseGroup.PurshaseGroup;
-import univ.tours.webuy.views.deal.DealDetailsActivity;
+import univ.tours.webuy.core.user.User;
 
 public class ListGroupAdapter extends RecyclerView.Adapter<ListGroupAdapter.MyViewHolder> {
 
     private ArrayList<PurshaseGroup> purshaseGroups;
+    private ArrayList<User> users;
     private Context context;
+
 
 
     public ListGroupAdapter(Context context, ArrayList<PurshaseGroup> purshaseGroups) {
         this.context = context;
         this.purshaseGroups = purshaseGroups;
+
+
     }
 
 
@@ -35,13 +39,19 @@ public class ListGroupAdapter extends RecyclerView.Adapter<ListGroupAdapter.MyVi
     @Override
     public ListGroupAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.card_group, parent, false);
-        MyViewHolder viewHolder = new MyViewHolder(view);
+        final View view = inflater.inflate(R.layout.card_group, parent, false);
+        final MyViewHolder viewHolder = new MyViewHolder(view);
 
         viewHolder.item_group.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, DealDetailsActivity.class));
+                users = purshaseGroups.get(viewHolder.getAdapterPosition()).getParticipants();
+
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                DetailsGroupFragment DealFragment = new DetailsGroupFragment();
+                DealFragment.setUsers(users);
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_container, DealFragment).addToBackStack(null).commit();
+
             }
         });
         return new ListGroupAdapter.MyViewHolder(view);

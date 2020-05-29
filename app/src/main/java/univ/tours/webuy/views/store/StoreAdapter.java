@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.webuy.R;
@@ -47,7 +46,7 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.MyViewHolder
         viewHolder.item_magazin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment selectedFragment = new DealFragment();
+
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
                 DealFragment DealFragment = new DealFragment();
                 DealFragment.setDeals(deals);

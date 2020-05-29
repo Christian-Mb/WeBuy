@@ -17,6 +17,7 @@ public class BuyingGroupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_buying_group);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.purshase_group);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);

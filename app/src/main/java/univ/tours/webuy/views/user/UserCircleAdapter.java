@@ -1,4 +1,4 @@
-package univ.tours.webuy.views.store;
+package univ.tours.webuy.views.user;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -16,26 +16,25 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-import univ.tours.webuy.core.deal.Deal;
-import univ.tours.webuy.core.store.Store;
+import univ.tours.webuy.core.user.User;
 
-public class StoreCircleAdapter extends RecyclerView.Adapter<StoreCircleAdapter.MyViewHolder> {
+public class UserCircleAdapter extends RecyclerView.Adapter<UserCircleAdapter.MyViewHolder> {
 
 
-    private ArrayList<Store> stores;
-    private ArrayList<Deal> deals;
+    private ArrayList<User> users;
+
     private Context context;
 
 
-    public StoreCircleAdapter(Context context, ArrayList<Store> stores, ArrayList<Deal> deals) {
+    public UserCircleAdapter(Context context, ArrayList<User> users) {
         this.context = context;
-        this.stores = stores;
-        this.deals = deals;
+        this.users = users;
+
     }
 
     @NonNull
     @Override
-    public StoreCircleAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public UserCircleAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         final View view = inflater.inflate(R.layout.card_ring_store, parent, false);
         MyViewHolder viewHolder = new MyViewHolder(view);
@@ -44,10 +43,8 @@ public class StoreCircleAdapter extends RecyclerView.Adapter<StoreCircleAdapter.
             @Override
             public void onClick(View v) {
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                StoreFragment storeFragment = new StoreFragment();
-                storeFragment.setStores(stores);
-                storeFragment.setDeals(deals);
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, storeFragment).addToBackStack(null).commit();
+                //Afficher des detais sur l'utilisateur
+
             }
 
         });
@@ -55,17 +52,16 @@ public class StoreCircleAdapter extends RecyclerView.Adapter<StoreCircleAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull StoreCircleAdapter.MyViewHolder holder, int position) {
-        if (!stores.isEmpty()) Picasso.get().load(stores.get(position).getLogo()).into(holder.logo);
+    public void onBindViewHolder(@NonNull UserCircleAdapter.MyViewHolder holder, int position) {
+        if (!users.isEmpty()) Picasso.get().load(users.get(position).getAvatar()).into(holder.logo);
     }
 
     @Override
     public int getItemCount() {
-        return stores.size();
+        return users.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-
 
         ImageView logo;
         RelativeLayout item_magazin;

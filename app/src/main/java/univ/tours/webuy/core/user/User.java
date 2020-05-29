@@ -1,16 +1,16 @@
 package univ.tours.webuy.core.user;
 
-import univ.tours.webuy.core.comment.Comment;
-import univ.tours.webuy.core.pourshaseGroup.PurshaseGroup;
-import univ.tours.webuy.core.utils.BaseWebuy;
-
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 
+import univ.tours.webuy.core.comment.Comment;
+import univ.tours.webuy.core.pourshaseGroup.PurshaseGroup;
+import univ.tours.webuy.core.utils.BaseWebuy;
+
 public class User extends BaseWebuy implements Serializable {
 
-    private String username, mobileNumber, email, password, token;
+    private String username, mobileNumber, email, password, avatar, token;
     private Timestamp createdAt;
     private ArrayList<Comment> comments;
     private ArrayList<PurshaseGroup> purshaseGroups;
@@ -77,5 +77,13 @@ public class User extends BaseWebuy implements Serializable {
 
     public void setPurshaseGroups(ArrayList<PurshaseGroup> purshaseGroups) {
         this.purshaseGroups = purshaseGroups;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 }

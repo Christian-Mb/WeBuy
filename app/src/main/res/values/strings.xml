@@ -82,6 +82,7 @@ Swipe again to the right to return to the reception. </string>
     <string name="begin_at">Begin at</string>
     <string name="edited_at">Edited at</string>
     <string name="current_purshase_group">Current purshase group :</string>
+    <string name="purshase_group">Purshase group</string>
     <string name="deal">Deal</string>
     <string name="back_to_ndeals">Back to\nDeals</string>
     <string name="create_or_join_a_purshase_groupe">Create or join a purshase groupe</string>
@@ -136,4 +137,8 @@ Swipe again to the right to return to the reception. </string>
     <string name="person_left">Person left</string>
     <string name="join_us">Join us</string>
     <string name="admin">Admin</string>
+    <string name="current_participants">Current participants :</string>
+    <string name="price_per_participant">Price per participant :</string>
+    <string name="created_at">Created at :</string>
+    <string name="duration">Duration :</string>
 </resources>
