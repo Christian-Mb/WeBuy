@@ -93,7 +93,7 @@
                     android:textSize="18dp"></TextView>
 
                 <TextView
-                    android:id="@+id/deal_link"
+                    android:id="@+id/join_us"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -108,7 +108,7 @@
                     android:id="@+id/user_image"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_alignBottom="@+id/deal_link"
+                    android:layout_alignBottom="@+id/join_us"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="15dp"
                     android:elevation="12dp"
@@ -134,7 +134,7 @@
                     android:id="@+id/purshase_admin_user"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/deal_link"
+                    android:layout_alignBottom="@+id/join_us"
                     android:layout_marginLeft="4dp"
                     android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/user_image"

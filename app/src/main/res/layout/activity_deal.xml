@@ -19,7 +19,7 @@
             android:id="@+id/deal_image_detail"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_alignBottom="@+id/deal_link"
+            android:layout_alignBottom="@+id/join_us"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
             android:elevation="12dp"
