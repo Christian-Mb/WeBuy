@@ -2,7 +2,9 @@ package univ.tours.webuy.core.utils;
 
 import android.util.Log;
 
-import univ.tours.webuy.BuildConfig;
+import com.example.webuy.BuildConfig;
+
+
 
 
 public class Logs {

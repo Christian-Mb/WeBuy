@@ -28,7 +28,7 @@
         </ImageView>
 
         <TextView
-            android:id="@+id/EnseigneText"
+            android:id="@+id/deal_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -42,7 +42,7 @@
             android:id="@+id/deal_promo_after"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/EnseigneText"
+            android:layout_below="@id/deal_title"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="7dp"
             android:layout_toRightOf="@id/deal_image"
@@ -54,7 +54,7 @@
             android:id="@+id/deal_promo_before"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/EnseigneText"
+            android:layout_below="@id/deal_title"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/deal_promo_after"
@@ -75,7 +75,7 @@
         </ImageView>
 
         <TextView
-            android:id="@+id/Deal_user"
+            android:id="@+id/purshase_admin_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/deal_image"
@@ -87,7 +87,7 @@
 
 
         <TextView
-            android:id="@+id/deal_time"
+            android:id="@+id/purshase_time"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -104,7 +104,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:layout_toRightOf="@id/Deal_user"
+            android:layout_toRightOf="@id/purshase_admin_user"
             android:gravity="right"
             android:text="@string/see_more"></TextView>
 
@@ -115,7 +115,7 @@
             android:layout_below="@id/deal_image"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="15dp"
-            android:layout_toRightOf="@id/Deal_user"
+            android:layout_toRightOf="@id/purshase_admin_user"
             android:src="@drawable/outline_thumb_up_black_18dp">
 
         </ImageView>
@@ -154,7 +154,7 @@
             android:id="@+id/nbrs_user_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/deal_time"
+            android:layout_below="@+id/purshase_time"
             android:layout_alignParentRight="true"
             android:layout_marginTop="20dp"
             android:layout_marginRight="50dp"
@@ -164,7 +164,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_below="@id/deal_time"
+            android:layout_below="@id/purshase_time"
             android:layout_alignParentRight="true"
             android:layout_marginTop="20dp"
             android:layout_marginRight="40dp"

@@ -255,7 +255,7 @@
             </View>
 
             <ImageView
-                android:id="@+id/quantity_available"
+                android:id="@+id/nbrs_left_person"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_below="@id/viewD5"

@@ -50,7 +50,7 @@
                 android:layout_height="130dp">
 
                 <TextView
-                    android:id="@+id/EnseigneText"
+                    android:id="@+id/deal_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -65,7 +65,7 @@
                     android:id="@+id/deal_stock"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/EnseigneText"
+                    android:layout_below="@+id/deal_title"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
                     android:text="@string/current_deals"
@@ -79,7 +79,7 @@
                     android:id="@+id/current_deals"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/EnseigneText"
+                    android:layout_below="@id/deal_title"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="55dp"

@@ -14,6 +14,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.webuy.R;
+
+import java.util.ArrayList;
+
 import univ.tours.webuy.core.deal.Deal;
 import univ.tours.webuy.core.store.Store;
 import univ.tours.webuy.core.utils.Logs;
@@ -21,8 +24,6 @@ import univ.tours.webuy.views.deal.DealFragment;
 import univ.tours.webuy.views.deal.DealHorizontalFragment;
 import univ.tours.webuy.views.store.StoreCircleFragment;
 import univ.tours.webuy.views.store.StoreFragment;
-
-import java.util.ArrayList;
 
 
 public class HomeFragment extends Fragment {
@@ -89,6 +90,7 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         StoreCircleFragment fragment = new StoreCircleFragment();
         fragment.setStores(stores);
+        fragment.setDeals(deals);
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.replace(R.id.storesFrame, fragment).commit();
 

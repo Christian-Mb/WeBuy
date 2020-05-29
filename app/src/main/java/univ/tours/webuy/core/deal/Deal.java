@@ -1,15 +1,15 @@
 package univ.tours.webuy.core.deal;
 
+import java.io.Serializable;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+
 import univ.tours.webuy.core.comment.Comment;
 import univ.tours.webuy.core.pourshaseGroup.PurshaseGroup;
 import univ.tours.webuy.core.product.Product;
 import univ.tours.webuy.core.store.Store;
 import univ.tours.webuy.core.user.User;
 import univ.tours.webuy.core.utils.BaseWebuy;
-
-import java.io.Serializable;
-import java.sql.Timestamp;
-import java.util.ArrayList;
 
 
 public class Deal extends BaseWebuy implements Serializable {
@@ -20,7 +20,7 @@ public class Deal extends BaseWebuy implements Serializable {
     private int quantity_min_to_Buy, quantity_available;
     private Store stores;
     private Product product;
-    private PurshaseGroup purshaseGroup;
+    private ArrayList<PurshaseGroup> purshaseGroup;
     private long userLike, userDislike;
     private Timestamp createdAt, startedAt, endedAt;
     private User user;
@@ -82,11 +82,11 @@ public class Deal extends BaseWebuy implements Serializable {
         this.product = product;
     }
 
-    public PurshaseGroup getPurshaseGroup() {
+    public ArrayList<PurshaseGroup> getPurshaseGroup() {
         return purshaseGroup;
     }
 
-    public void setPurshaseGroup(PurshaseGroup purshaseGroup) {
+    public void setPurshaseGroup(ArrayList<PurshaseGroup> purshaseGroup) {
         this.purshaseGroup = purshaseGroup;
     }
 

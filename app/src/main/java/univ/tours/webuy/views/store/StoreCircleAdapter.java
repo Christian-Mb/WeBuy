@@ -13,21 +13,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.webuy.R;
-import univ.tours.webuy.core.store.Store;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import univ.tours.webuy.core.deal.Deal;
+import univ.tours.webuy.core.store.Store;
+
 public class StoreCircleAdapter extends RecyclerView.Adapter<StoreCircleAdapter.MyViewHolder> {
 
 
-    ArrayList<Store> stores;
-    Context context;
+    private ArrayList<Store> stores;
+    private ArrayList<Deal> deals;
+    private Context context;
 
 
-    public StoreCircleAdapter(Context context, ArrayList<Store> stores) {
+    public StoreCircleAdapter(Context context, ArrayList<Store> stores, ArrayList<Deal> deals) {
         this.context = context;
         this.stores = stores;
+        this.deals = deals;
     }
 
     @NonNull
@@ -43,6 +47,7 @@ public class StoreCircleAdapter extends RecyclerView.Adapter<StoreCircleAdapter.
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
                 StoreFragment storeFragment = new StoreFragment();
                 storeFragment.setStores(stores);
+                storeFragment.setDeals(deals);
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, storeFragment).addToBackStack(null).commit();
             }
 
@@ -52,7 +57,7 @@ public class StoreCircleAdapter extends RecyclerView.Adapter<StoreCircleAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull StoreCircleAdapter.MyViewHolder holder, int position) {
-        Picasso.get().load(stores.get(position).getLogo()).into(holder.logo);
+        if (!stores.isEmpty()) Picasso.get().load(stores.get(position).getLogo()).into(holder.logo);
     }
 
     @Override
