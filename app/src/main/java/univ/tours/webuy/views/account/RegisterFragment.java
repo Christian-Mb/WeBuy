@@ -11,17 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.example.webuy.R;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class RegisterFragment extends Fragment {
 
@@ -36,11 +26,11 @@ public class RegisterFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.register, container, false);
         v = root;
-        Button registerBtn = (Button)root.findViewById(R.id.cirRegisterButton);
-        registerName = (EditText)root.findViewById(R.id.RegisterName);
-        registerEmail = (EditText)root.findViewById(R.id.RegisterMail);
-        registerNumber = (EditText)root.findViewById(R.id.RegisterNumber);
-        registerPassword = (EditText)root.findViewById(R.id.RegisterPassword);
+        Button registerBtn = root.findViewById(R.id.cirRegisterButton);
+        registerName = root.findViewById(R.id.RegisterName);
+        registerEmail = root.findViewById(R.id.RegisterMail);
+        registerNumber = root.findViewById(R.id.RegisterNumber);
+        registerPassword = root.findViewById(R.id.RegisterPassword);
 
         return root;
     }

@@ -2,11 +2,6 @@ package univ.tours.webuy.core.store;
 
 import android.util.Log;
 
-import univ.tours.webuy.core.storeAddress.StoreAddress;
-import univ.tours.webuy.core.utils.BaseWebuy;
-import univ.tours.webuy.core.utils.HttpHandler;
-import univ.tours.webuy.views.store.StoreFragment;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,17 +9,19 @@ import org.json.JSONObject;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import univ.tours.webuy.core.storeAddress.StoreAddress;
+import univ.tours.webuy.core.utils.BaseWebuy;
+import univ.tours.webuy.core.utils.HttpHandler;
+import univ.tours.webuy.views.store.StoreFragment;
+
 public class Store extends BaseWebuy implements Serializable {
 
 
     // Juste nom de la classe afin de l'afficher pendant le log.
     private static String TAG = StoreFragment.class.getSimpleName();
     private static BaseWebuy BaseWeBuy;
-    private static String api_url = BaseWebuy.api_url + "/magasins";
+    private static String api_url = BaseWebuy.api_url + "/stores/AllStores";
     private String nom;
-    private String adresse;
-    private double latitude;
-    private double longitude;
     private StoreAddress storeAddress;
 
     // liste des promos d'un magasin, à récupérer aussi via le service Web
@@ -71,24 +68,30 @@ public class Store extends BaseWebuy implements Serializable {
                     // récupérer les valeurs de chaque propriété
                     JSONObject magasin_json = magasins_json.getJSONObject(i);
 
-                    int id_magasin = magasin_json.getInt("id_magasin");
-                    String nom = magasin_json.getString("nom");
-                    String adresse = magasin_json.getString("adresse");
+                    int id_magasin = (int) magasin_json.getLong("store_id");
+                    String nom = magasin_json.getString("name");
 
-                    double latitude = magasin_json.getDouble("latitude");
-                    double longitude = magasin_json.getDouble("longitude");
+
+                    JSONObject adresse = magasin_json.getJSONObject("address");
+                    int address_id = (int) adresse.getLong("address_id");
+                    double latitude = adresse.getDouble("latitude");
+                    double longitude = adresse.getDouble("longitude");
+                    String depatment = adresse.getString("department");
 
                     String logo = magasin_json.getString("logo");
 
                     // créer un objet magasin en lui rajoutant les propriétés récupérées par json
+                    StoreAddress s = new StoreAddress();
+                    s.setId(address_id);
+                    s.setDepartment(depatment);
+                    s.setLatitude(latitude);
+                    s.setLongitude(longitude);
 
                     Store magasin = new Store();
                     magasin.setId(id_magasin);
                     magasin.setNom(nom);
-                    magasin.setLongitude(latitude);
-                    magasin.setLatitude(longitude);
-                    magasin.setAdresse(adresse);
                     magasin.setLogo(logo);
+                    magasin.setStoreAddress(s);
                     // réjouter le magasin à la liste des magasins
                     magasins.add(magasin);
                 }
@@ -113,29 +116,6 @@ public class Store extends BaseWebuy implements Serializable {
         this.nom = nom;
     }
 
-    public String getAdresse() {
-        return adresse;
-    }
-
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
-    }
-
-    public double getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(double latitude) {
-        this.latitude = latitude;
-    }
-
-    public double getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
-    }
 
     public String getLogo() {
         return logo;
@@ -153,14 +133,5 @@ public class Store extends BaseWebuy implements Serializable {
         this.storeAddress = storeAddress;
     }
 
-    @Override
-    public String toString() {
-        return "Store{" +
-                "nom='" + nom + '\'' +
-                ", adresse='" + adresse + '\'' +
-                ", latitude=" + latitude +
-                ", longitude=" + longitude +
-                ", logo='" + logo + '\'' +
-                '}';
-    }
+
 }

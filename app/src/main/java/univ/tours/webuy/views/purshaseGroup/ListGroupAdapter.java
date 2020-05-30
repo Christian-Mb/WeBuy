@@ -30,6 +30,7 @@ public class ListGroupAdapter extends RecyclerView.Adapter<ListGroupAdapter.MyVi
     public ListGroupAdapter(Context context, ArrayList<PurshaseGroup> purshaseGroups) {
         this.context = context;
         this.purshaseGroups = purshaseGroups;
+        users = new ArrayList<>();
 
 
     }
@@ -45,7 +46,7 @@ public class ListGroupAdapter extends RecyclerView.Adapter<ListGroupAdapter.MyVi
         viewHolder.item_group.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                users = purshaseGroups.get(viewHolder.getAdapterPosition()).getParticipants();
+                //  users = purshaseGroups.get(viewHolder.getAdapterPosition()).getParticipants();
 
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
                 DetailsGroupFragment DealFragment = new DetailsGroupFragment();
@@ -59,7 +60,7 @@ public class ListGroupAdapter extends RecyclerView.Adapter<ListGroupAdapter.MyVi
 
     @Override
     public void onBindViewHolder(@NonNull ListGroupAdapter.MyViewHolder holder, int position) {
-        if (!purshaseGroups.isEmpty()) {
+        /*if (!purshaseGroups.isEmpty()) {
 
             holder.title.setText(purshaseGroups.get(position).getDeal().getProduct().getLabel() + " " + purshaseGroups.get(position).getDeal().getStores().getStoreAddress().getDepartment());
             holder.promo_price.setText(String.valueOf(purshaseGroups.get(position).getDeal().getPrice_promo()));
@@ -72,12 +73,13 @@ public class ListGroupAdapter extends RecyclerView.Adapter<ListGroupAdapter.MyVi
 
 
         }
-
+*/
     }
 
     @Override
     public int getItemCount() {
-        return purshaseGroups.size();
+        //return purshaseGroups.size();
+        return 6;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

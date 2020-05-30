@@ -84,7 +84,8 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
 
     @Override
     public int getItemCount() {
-        return deals.size();
+        //return deals.size();
+        return 6;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
