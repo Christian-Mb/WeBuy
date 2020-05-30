@@ -44,6 +44,4 @@ dependencies {
     implementation 'im.crisp:crisp-sdk:0.1.14'
     implementation 'com.google.android.material:material:1.2.0-alpha02'
     implementation 'com.squareup.picasso:picasso:2.71828'
-
-
 }
