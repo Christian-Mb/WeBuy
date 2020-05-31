@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="univ.tours.webuy.views.deal.DealDetailsActivity"
     tools:showIn="@layout/details_deal_fragment">
@@ -61,7 +62,7 @@
             android:layout_toRightOf="@+id/deal_image_detail"
             android:text="TITRE DEAL"
             android:textColor="@color/primaryTextColor"
-            android:textSize="26dp"
+            android:textSize="14dp"
             android:textStyle="bold">
 
         </TextView>

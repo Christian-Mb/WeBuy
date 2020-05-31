@@ -30,7 +30,7 @@ public class ListGroupFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.magazin_fragment, container, false);
+        View view = inflater.inflate(R.layout.cardview_ring, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.magazinRecyclerView);
         ListGroupAdapter listGroupAdapter = new ListGroupAdapter(getContext(), purshaseGroups);
         recyclerView.setAdapter(listGroupAdapter);

@@ -8,6 +8,7 @@ import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -16,12 +17,14 @@ import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.webuy.R;
+import com.squareup.picasso.Picasso;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 import univ.tours.webuy.core.deal.Deal;
+import univ.tours.webuy.core.utils.Logs;
 
 public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyViewHolder> {
 
@@ -38,12 +41,17 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
     public DealListAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.deal_cardview, parent, false);
-        MyViewHolder viewHolder = new MyViewHolder(view);
+        final MyViewHolder viewHolder = new MyViewHolder(view);
 
         viewHolder.item_deal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, DealDetailsActivity.class));
+                Intent intent = new Intent(context, DealDetailsActivity.class);
+                intent.putExtra("deal", deals);
+                intent.putExtra("position de", viewHolder.getAdapterPosition());
+                Logs.info(this, "position " + viewHolder.getAdapterPosition());
+
+                context.startActivity(intent);
             }
         });
         return new DealListAdapter.MyViewHolder(view);
@@ -68,6 +76,7 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
             Timestamp beginAt = deals.get(position).getStartedAt();
             Timestamp endAt = deals.get(position).getEndedAt();
             LocalDate now = LocalDate.now();
+            Picasso.get().load(deals.get(position).getProduct().getImage()).into(holder.img);
            /* Timestamp t = Timestamp.valueOf(now.toString());
             if (t.before(endAt)) {
                 Long duree = t.getTime() - beginAt.getTime() / 60;
@@ -92,6 +101,7 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
 
         TextView title, price_before, promo_price, deal_time, quantity_available, quantity_to_buy, deal_user, deal_likes, deal_unlikes, nbr_group_purshase;
         RelativeLayout item_deal;
+        ImageView img;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -107,6 +117,7 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
             nbr_group_purshase = itemView.findViewById(R.id.nbr_purshase_group);
             price_before = itemView.findViewById(R.id.deal_promo_before);
             price_before.setPaintFlags(price_before.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            img = itemView.findViewById(R.id.deal_image);
         }
     }
 

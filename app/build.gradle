@@ -44,4 +44,13 @@ dependencies {
     implementation 'im.crisp:crisp-sdk:0.1.14'
     implementation 'com.google.android.material:material:1.2.0-alpha02'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.google.firebase:firebase-auth:19.3.1'
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+
+
+    // Firebase UI
+    // Used in FirebaseUIActivity.
+    implementation 'com.firebaseui:firebase-ui-auth:6.2.1'
+    implementation 'com.facebook.android:facebook-login:4.42.0'
+    implementation 'androidx.browser:browser:1.0.0'
 }

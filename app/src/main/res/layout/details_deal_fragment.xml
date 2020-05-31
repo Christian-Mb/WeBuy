@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/profileBackground"
+    android:background="@color/Background_color"
     android:fitsSystemWindows="true"
     tools:context="univ.tours.webuy.views.deal.DealDetailsActivity">
 
@@ -30,42 +30,44 @@
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:background="@drawable/logo_auchan"
-                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"         
+              
+                
+            
                 android:orientation="vertical">
 
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="28dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textStyle="bold" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
                     android:layout_gravity="bottom"
-                    android:layout_marginTop="140dp"
+
                     android:background="@color/profileBackground"
                     android:gravity="center">
 
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/logo_auchan">
+
+                    </ImageView>
+
                     <View
                         android:layout_width="match_parent"
+                        android:id="@+id/viewM"
+                        android:layout_below="@id/img"
                         android:layout_height="30dp"
-                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="35dp"
                         android:background="@drawable/shape" />
 
                     <TextView
                         android:id="@+id/back"
+                        android:layout_below="@id/viewM"
+
+                        android:layout_marginTop="215dp"
+
                         style="@style/profileStyledBackButton"
                         android:text="@string/back_to_ndeals" />
                 </RelativeLayout>

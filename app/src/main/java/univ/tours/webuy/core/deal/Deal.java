@@ -32,7 +32,7 @@ public class Deal extends BaseWebuy implements Serializable {
     private int quantity_min_to_Buy, quantity_available;
     private Store stores;
     private Product product;
-    private ArrayList<PurshaseGroup> purshaseGroup;
+    private static ArrayList<PurshaseGroup> purshaseGroup = new ArrayList<>();
     private long userLike, userDislike;
     private Timestamp createdAt, startedAt, endedAt;
     private User user;
@@ -89,66 +89,6 @@ public class Deal extends BaseWebuy implements Serializable {
 
     public ArrayList<PurshaseGroup> getPurshaseGroup() {
         return purshaseGroup;
-    }
-
-    public void setPurshaseGroup(ArrayList<PurshaseGroup> purshaseGroup) {
-        this.purshaseGroup = purshaseGroup;
-    }
-
-    public ArrayList<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(ArrayList<Comment> comments) {
-        this.comments = comments;
-    }
-
-    public long getUserLike() {
-        return userLike;
-    }
-
-    public void setUserLike(long userLike) {
-        this.userLike = userLike;
-    }
-
-    public long getUserDislike() {
-        return userDislike;
-    }
-
-    public void setUserDislike(long userDislike) {
-        this.userDislike = userDislike;
-    }
-
-    public Timestamp getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Timestamp createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Timestamp getStartedAt() {
-        return startedAt;
-    }
-
-    public void setStartedAt(Timestamp startedAt) {
-        this.startedAt = startedAt;
-    }
-
-    public Timestamp getEndedAt() {
-        return endedAt;
-    }
-
-    public void setEndedAt(Timestamp endedAt) {
-        this.endedAt = endedAt;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public static ArrayList<Deal> getAllDeals() {
@@ -259,6 +199,7 @@ public class Deal extends BaseWebuy implements Serializable {
                     u.setUsername(username);
                     d.setUser(u);
 
+
                     // réjouter le magasin à la liste des magasins
                     deals.add(d);
                 }
@@ -272,6 +213,66 @@ public class Deal extends BaseWebuy implements Serializable {
 
         return deals;
 
+    }
+
+    public ArrayList<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(ArrayList<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public long getUserLike() {
+        return userLike;
+    }
+
+    public void setUserLike(long userLike) {
+        this.userLike = userLike;
+    }
+
+    public long getUserDislike() {
+        return userDislike;
+    }
+
+    public void setUserDislike(long userDislike) {
+        this.userDislike = userDislike;
+    }
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Timestamp getStartedAt() {
+        return startedAt;
+    }
+
+    public void setStartedAt(Timestamp startedAt) {
+        this.startedAt = startedAt;
+    }
+
+    public Timestamp getEndedAt() {
+        return endedAt;
+    }
+
+    public void setEndedAt(Timestamp endedAt) {
+        this.endedAt = endedAt;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setPurshaseGroup(ArrayList<PurshaseGroup> purshaseGroup) {
+        Deal.purshaseGroup = purshaseGroup;
     }
 
     @Override
