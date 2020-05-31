@@ -27,69 +27,16 @@ public class Deal extends BaseWebuy implements Serializable {
     private static String TAG = DealFragment.class.getSimpleName();
     private static BaseWebuy BaseWeBuy;
     private static String api_url = BaseWebuy.api_url + "/deals/AllDeals";
+    private static ArrayList<PurshaseGroup> purshaseGroup = new ArrayList<>();
     private double price_before_promo;
     private double price_promo;
     private int quantity_min_to_Buy, quantity_available;
     private Store stores;
     private Product product;
-    private static ArrayList<PurshaseGroup> purshaseGroup = new ArrayList<>();
     private long userLike, userDislike;
     private Timestamp createdAt, startedAt, endedAt;
     private User user;
     private ArrayList<Comment> comments;
-
-
-    public double getPrice_before_promo() {
-        return price_before_promo;
-    }
-
-    public void setPrice_before_promo(double price_before_promo) {
-        this.price_before_promo = price_before_promo;
-    }
-
-    public double getPrice_promo() {
-        return price_promo;
-    }
-
-    public void setPrice_promo(double price_promo) {
-        this.price_promo = price_promo;
-    }
-
-    public int getQuantity_min_to_Buy() {
-        return quantity_min_to_Buy;
-    }
-
-    public void setQuantity_min_to_Buy(int quantity_min_to_Buy) {
-        this.quantity_min_to_Buy = quantity_min_to_Buy;
-    }
-
-    public int getQuantity_available() {
-        return quantity_available;
-    }
-
-    public void setQuantity_available(int quantity_available) {
-        this.quantity_available = quantity_available;
-    }
-
-    public Store getStores() {
-        return stores;
-    }
-
-    public void setStores(Store stores) {
-        this.stores = stores;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-    public ArrayList<PurshaseGroup> getPurshaseGroup() {
-        return purshaseGroup;
-    }
 
     public static ArrayList<Deal> getAllDeals() {
 
@@ -215,6 +162,62 @@ public class Deal extends BaseWebuy implements Serializable {
 
     }
 
+    public double getPrice_before_promo() {
+        return price_before_promo;
+    }
+
+    public void setPrice_before_promo(double price_before_promo) {
+        this.price_before_promo = price_before_promo;
+    }
+
+    public double getPrice_promo() {
+        return price_promo;
+    }
+
+    public void setPrice_promo(double price_promo) {
+        this.price_promo = price_promo;
+    }
+
+    public int getQuantity_min_to_Buy() {
+        return quantity_min_to_Buy;
+    }
+
+    public void setQuantity_min_to_Buy(int quantity_min_to_Buy) {
+        this.quantity_min_to_Buy = quantity_min_to_Buy;
+    }
+
+    public int getQuantity_available() {
+        return quantity_available;
+    }
+
+    public void setQuantity_available(int quantity_available) {
+        this.quantity_available = quantity_available;
+    }
+
+    public Store getStores() {
+        return stores;
+    }
+
+    public void setStores(Store stores) {
+        this.stores = stores;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public ArrayList<PurshaseGroup> getPurshaseGroup() {
+        return purshaseGroup;
+    }
+
+    public void setPurshaseGroup(ArrayList<PurshaseGroup> purshaseGroup) {
+        Deal.purshaseGroup = purshaseGroup;
+    }
+
     public ArrayList<Comment> getComments() {
         return comments;
     }
@@ -269,10 +272,6 @@ public class Deal extends BaseWebuy implements Serializable {
 
     public void setUser(User user) {
         this.user = user;
-    }
-
-    public void setPurshaseGroup(ArrayList<PurshaseGroup> purshaseGroup) {
-        Deal.purshaseGroup = purshaseGroup;
     }
 
     @Override

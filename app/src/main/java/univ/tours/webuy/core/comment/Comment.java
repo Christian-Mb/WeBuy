@@ -1,9 +1,9 @@
 package univ.tours.webuy.core.comment;
 
-import univ.tours.webuy.core.utils.BaseWebuy;
-
 import java.io.Serializable;
 import java.sql.Timestamp;
+
+import univ.tours.webuy.core.utils.BaseWebuy;
 
 public class Comment extends BaseWebuy implements Serializable {
     private String content;

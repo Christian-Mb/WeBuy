@@ -22,12 +22,12 @@ public class DealHorizontalFragment extends Fragment {
 
     ArrayList<Deal> deals;
 
-    public void setDeals(ArrayList<Deal> deals) {
-        this.deals = deals;
-    }
-
     public DealHorizontalFragment() {
 
+    }
+
+    public void setDeals(ArrayList<Deal> deals) {
+        this.deals = deals;
     }
 
     @Nullable

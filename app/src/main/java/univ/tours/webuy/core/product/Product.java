@@ -1,8 +1,8 @@
 package univ.tours.webuy.core.product;
 
-import univ.tours.webuy.core.utils.BaseWebuy;
-
 import java.io.Serializable;
+
+import univ.tours.webuy.core.utils.BaseWebuy;
 
 public class Product extends BaseWebuy implements Serializable {
 

@@ -22,9 +22,6 @@ import univ.tours.webuy.views.onboarding.OnboardingActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<Store> stores;
-    private ArrayList<Deal> deals;
-
     View.OnClickListener connect = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -32,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     };
-
+    private ArrayList<Store> stores;
+    private ArrayList<Deal> deals;
     View.OnClickListener deal = new View.OnClickListener() {
         @Override
         public void onClick(View v) {

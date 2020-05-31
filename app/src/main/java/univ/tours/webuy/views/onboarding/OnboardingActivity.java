@@ -19,6 +19,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.webuy.R;
+
 import univ.tours.webuy.core.utils.Logs;
 import univ.tours.webuy.views.PrefManager;
 import univ.tours.webuy.views.account.AccountActivity;

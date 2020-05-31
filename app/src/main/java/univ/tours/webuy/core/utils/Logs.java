@@ -5,8 +5,6 @@ import android.util.Log;
 import com.example.webuy.BuildConfig;
 
 
-
-
 public class Logs {
     public static String tag = "[MDB_LOG]";
 

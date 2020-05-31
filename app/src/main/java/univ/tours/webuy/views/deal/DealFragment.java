@@ -12,20 +12,21 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.webuy.R;
-import univ.tours.webuy.core.deal.Deal;
 
 import java.util.ArrayList;
+
+import univ.tours.webuy.core.deal.Deal;
 
 public class DealFragment extends Fragment {
 
     private ArrayList<Deal> deals;
 
-    public void setDeals(ArrayList<Deal> deals) {
-        this.deals = deals;
-    }
-
     public DealFragment() {
 
+    }
+
+    public void setDeals(ArrayList<Deal> deals) {
+        this.deals = deals;
     }
 
     @Nullable

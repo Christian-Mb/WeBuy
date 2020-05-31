@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.webuy.R;
+
 import univ.tours.webuy.views.account.LoginFragment;
 import univ.tours.webuy.views.account.RegisterFragment;
 

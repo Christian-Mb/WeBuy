@@ -1,17 +1,14 @@
 package univ.tours.webuy.views.account;
 
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.webuy.R;
-
-import univ.tours.webuy.core.utils.Toasts;
-import univ.tours.webuy.views.ui.main.SectionsPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
+
+import univ.tours.webuy.views.ui.main.SectionsPagerAdapter;
 
 public class AccountActivity extends AppCompatActivity {
 

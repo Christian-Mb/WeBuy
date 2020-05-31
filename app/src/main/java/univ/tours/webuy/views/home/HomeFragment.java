@@ -27,9 +27,9 @@ import univ.tours.webuy.views.store.StoreFragment;
 
 
 public class HomeFragment extends Fragment {
+    ArrayList<Deal> deals;
     private TextView seeMoreStores, seeMoreDeals;
     private ArrayList<Store> stores;
-    ArrayList<Deal> deals;
 
     public HomeFragment() {
         // Required empty public constructor

@@ -30,10 +30,9 @@
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"         
-              
-                
-            
+                android:layout_height="wrap_content"
+
+
                 android:orientation="vertical">
 
 
@@ -55,20 +54,20 @@
                     </ImageView>
 
                     <View
-                        android:layout_width="match_parent"
                         android:id="@+id/viewM"
-                        android:layout_below="@id/img"
+                        android:layout_width="match_parent"
                         android:layout_height="30dp"
+                        android:layout_below="@id/img"
                         android:layout_marginBottom="35dp"
                         android:background="@drawable/shape" />
 
                     <TextView
                         android:id="@+id/back"
+                        style="@style/profileStyledBackButton"
+
                         android:layout_below="@id/viewM"
 
                         android:layout_marginTop="215dp"
-
-                        style="@style/profileStyledBackButton"
                         android:text="@string/back_to_ndeals" />
                 </RelativeLayout>
 

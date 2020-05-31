@@ -206,8 +206,8 @@
                     android:src="@drawable/ic_user"></ImageView>
 
                 <TextView
-                    android:layout_width="wrap_content"
                     android:id="@+id/nbr_user"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/purshase_time"
 

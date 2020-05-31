@@ -21,6 +21,7 @@ public class RegisterFragment extends Fragment {
     private EditText registerPassword;
     private String api_url = "http://192.168.0.29:8080/users/add";
     private View v;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -36,40 +37,36 @@ public class RegisterFragment extends Fragment {
     }
 
     /**
-    private void InsertSV(){
-       // this.api_url = api_url + this.registerEmail.getText().toString();
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, api_url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
+     private void InsertSV(){
+     // this.api_url = api_url + this.registerEmail.getText().toString();
+     StringRequest stringRequest = new StringRequest(Request.Method.POST, api_url, new Response.Listener<String>() {
+    @Override public void onResponse(String response) {
 
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        }
-        ){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<String,String>();
-                params.put("email",registerEmail.getText().toString());
-                params.put("password",registerPassword.getText().toString());
-                params.put("username",registerName.getText().toString());
-                params.put("mobile_number", registerNumber.getText().toString());
-                return params;
-            }
-
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                HashMap<String, String> headers = new HashMap<String, String>();
-                headers.put("Content-Type", "application/json; charset=utf-8");
-                return headers;
-            }
-        }
-;
-        RequestQueue requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
-        requestQueue.add(stringRequest);
     }
+    }, new Response.ErrorListener() {
+    @Override public void onErrorResponse(VolleyError error) {
+
+    }
+    }
+     ){
+    @Override protected Map<String, String> getParams() throws AuthFailureError {
+    Map<String, String> params = new HashMap<String,String>();
+    params.put("email",registerEmail.getText().toString());
+    params.put("password",registerPassword.getText().toString());
+    params.put("username",registerName.getText().toString());
+    params.put("mobile_number", registerNumber.getText().toString());
+    return params;
+    }
+
+    @Override public Map<String, String> getHeaders() throws AuthFailureError {
+    HashMap<String, String> headers = new HashMap<String, String>();
+    headers.put("Content-Type", "application/json; charset=utf-8");
+    return headers;
+    }
+    }
+     ;
+     RequestQueue requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
+     requestQueue.add(stringRequest);
+     }
      **/
 }

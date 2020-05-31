@@ -26,7 +26,6 @@ public class ListGroupAdapter extends RecyclerView.Adapter<ListGroupAdapter.MyVi
     private Context context;
 
 
-
     public ListGroupAdapter(Context context, ArrayList<PurshaseGroup> purshaseGroups) {
         this.context = context;
         this.purshaseGroups = purshaseGroups;
