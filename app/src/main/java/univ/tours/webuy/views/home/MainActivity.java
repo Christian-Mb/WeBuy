@@ -11,13 +11,14 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.webuy.R;
+
+import java.util.ArrayList;
+
 import univ.tours.webuy.core.deal.Deal;
 import univ.tours.webuy.core.store.Store;
 import univ.tours.webuy.core.utils.Toasts;
 import univ.tours.webuy.views.account.AccountActivity;
 import univ.tours.webuy.views.onboarding.OnboardingActivity;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         GetAllMagasinsDealsTask task = new GetAllMagasinsDealsTask(MainActivity.this);
         task.execute();
+
     }
 
 
@@ -91,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
 
             stores = Store.getAllStores();
             deals = Deal.getAllDeals();
-
 
             return null;
         }

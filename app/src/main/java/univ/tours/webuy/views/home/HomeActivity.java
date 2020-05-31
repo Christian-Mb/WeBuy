@@ -17,6 +17,12 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.example.webuy.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
+
 import univ.tours.webuy.core.deal.Deal;
 import univ.tours.webuy.core.store.Store;
 import univ.tours.webuy.core.utils.Logs;
@@ -27,11 +33,6 @@ import univ.tours.webuy.views.customerSupport.CrispSDKActivity;
 import univ.tours.webuy.views.deal.AddDealActivity;
 import univ.tours.webuy.views.deal.DealFragment;
 import univ.tours.webuy.views.stats.DashbordActivity;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationView;
-
-import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -54,8 +55,9 @@ public class HomeActivity extends AppCompatActivity
                     startActivity(intent);
                     break;
                 case R.id.navigationMyCourses:
-                    fragment = new DealFragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+                    DealFragment f = new DealFragment();
+                    f.setDeals(deals);
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
 
                     break;
                 case R.id.navigationHome:
@@ -93,6 +95,7 @@ public class HomeActivity extends AppCompatActivity
         stores = (ArrayList<Store>) intent.getSerializableExtra("store");
         deals = (ArrayList<Deal>) intent.getSerializableExtra("deal");
         Logs.info(this, "size " + stores.size());
+        Logs.info(this, "size deal " + deals.size());
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         Toolbar toolbar = findViewById(R.id.toolbar);

@@ -64,11 +64,11 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
             holder.deal_user.setText(String.valueOf(deals.get(position).getUser().getUsername()));
             holder.deal_likes.setText(String.valueOf(deals.get(position).getUserLike()));
             holder.deal_unlikes.setText(String.valueOf(deals.get(position).getUserDislike()));
-            holder.nbr_group_purshase.setText(String.valueOf(deals.get(position).getPurshaseGroup().size()));
+            //holder.nbr_group_purshase.setText(String.valueOf(deals.get(position).getPurshaseGroup().size()));
             Timestamp beginAt = deals.get(position).getStartedAt();
             Timestamp endAt = deals.get(position).getEndedAt();
             LocalDate now = LocalDate.now();
-            Timestamp t = Timestamp.valueOf(now.toString());
+           /* Timestamp t = Timestamp.valueOf(now.toString());
             if (t.before(endAt)) {
                 Long duree = t.getTime() - beginAt.getTime() / 60;
                 if (duree / 60 != 0) {
@@ -77,15 +77,15 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.MyView
                     holder.deal_time.setText(duree / 60 + "h");
                 }
 
-            }
+            }*/
         }
 
     }
 
     @Override
     public int getItemCount() {
-        //return deals.size();
-        return 6;
+        return deals.size();
+
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
